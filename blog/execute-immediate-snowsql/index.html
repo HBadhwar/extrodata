@@ -1,0 +1,44 @@
+---
+layout: default
+title: Execute Immediate in SnowSQL
+description: A deep dive into using EXECUTE IMMEDIATE with SnowSQL and Snowsight.
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="hero__tag">dbt</span>
+    <h1 class="gradient-text">Execute Immediate in SnowSQL</h1>
+    <p class="lead">A deep dive into using EXECUTE IMMEDIATE with SnowSQL and Snowsight.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="service-detail">
+      <p>Snowflake's EXECUTE IMMEDIATE command is a powerful feature that allows dynamic SQL execution. Understanding how to use it effectively can streamline your data workflows.</p>
+
+      <h2>What is EXECUTE IMMEDIATE?</h2>
+      <p>EXECUTE IMMEDIATE allows you to construct and execute SQL statements dynamically at runtime. This is particularly useful for scenarios where the SQL statement needs to be built programmatically based on runtime conditions.</p>
+
+      <h2>Basic Syntax</h2>
+      <pre class="code-block"><code>EXECUTE IMMEDIATE $'''
+  CREATE OR REPLACE TABLE dynamic_table AS
+  SELECT * FROM source_table
+  WHERE date_column = CURRENT_DATE();
+''';</code></pre>
+
+      <h2>Use Cases</h2>
+      <ul class="service-features">
+        <li><strong>Dynamic Table Creation:</strong> Generate tables based on runtime parameters</li>
+        <li><strong>Bulk Operations:</strong> Execute multiple DDL statements in a single call</li>
+        <li><strong>Conditional Logic:</strong> Build SQL based on IF/ELSE conditions</li>
+        <li><strong>Automation Scripts:</strong> Simplify repetitive administrative tasks</li>
+      </ul>
+
+      <h2>SnowSQL vs Snowsight</h2>
+      <p>Both SnowSQL (command-line) and Snowsight (web UI) support EXECUTE IMMEDIATE. However, there are subtle differences in how variables and multi-statement scripts are handled between the two interfaces.</p>
+
+      <a href="/contact/" class="btn btn--primary" style="margin-top: 2rem; display: inline-block;">Need Snowflake Expertise?</a>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+name: "Extrodata AI & Data Consulting"
+description: "Data-Driven AI Transformation"
+# Exclude dev files from being compiled into the final site
+exclude:
+  - .devcontainer/
+  - .opencode/
+  - opencode.json
+  - .env
+  - .jekyll-cache/
+  - _site/

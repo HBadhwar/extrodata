@@ -1,0 +1,45 @@
+---
+layout: default
+title: Near Real-Time Data Ingestion
+description: Strategies and tools for building near real-time data ingestion pipelines.
+---
+
+<section class="page-hero">
+  <div class="container">
+    <span class="hero__tag">Data Engineering</span>
+    <h1 class="gradient-text">Near Real-Time Data Ingestion</h1>
+    <p class="lead">Strategies and tools for building near real-time data ingestion pipelines.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="service-detail">
+      <p>In today's fast-paced business environment, the ability to ingest and process data in near real-time is a competitive advantage. But building these pipelines comes with unique challenges.</p>
+
+      <h2>Why Near Real-Time Matters</h2>
+      <p>Traditional batch processing, while reliable, often introduces delays that can impact decision-making. Near real-time ingestion allows organizations to react to events as they happen, enabling faster responses and more accurate insights.</p>
+
+      <h2>Key Technologies</h2>
+      <ul class="service-features">
+        <li><strong>Apache Kafka:</strong> Distributed event streaming platform for high-throughput data pipelines</li>
+        <li><strong>Azure Event Hubs:</strong> Fully managed streaming platform for ingesting millions of events</li>
+        <li><strong>Snowpipe:</strong> Snowflake's continuous data ingestion service for near real-time loading</li>
+        <li><strong>Change Data Capture (CDC):</strong> Tools like Debezium for capturing database changes in real-time</li>
+      </ul>
+
+      <h2>Architecture Patterns</h2>
+      <p>A typical near real-time ingestion pipeline includes source connectors, a streaming platform, transformation logic, and a destination data warehouse or lake. The key is balancing latency, throughput, and reliability.</p>
+
+      <h2>Best Practices</h2>
+      <ul class="service-features">
+        <li>Implement schema validation at the ingestion point</li>
+        <li>Use idempotent loading to handle duplicates gracefully</li>
+        <li>Monitor pipeline health with comprehensive alerting</li>
+        <li>Design for failure with retry logic and dead letter queues</li>
+      </ul>
+
+      <a href="/contact/" class="btn btn--primary" style="margin-top: 2rem; display: inline-block;">Need Help Building Pipelines?</a>
+    </article>
+  </div>
+</section>

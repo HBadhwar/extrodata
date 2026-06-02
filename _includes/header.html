@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}{% if page.description %} – {{ page.description }}{% endif %}</title>
+  <link rel="stylesheet" href="/assets/css/main.css" media="all">
+  <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/assets/images/favicon-180.png">
+</head>
+
+<body>
+
+<a class="skip-link screen-reader-text" href="#main-content">Skip to content</a>
+
+<!-- ==================== NAVIGATION ==================== -->
+<header class="nav" id="site-header">
+  <div class="nav__inner container">
+    <a href="/" class="nav__brand">
+      <img src="/assets/images/main-lgoo.png" alt="Extrodata" width="160" height="102" loading="eager">
+    </a>
+
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="nav__toggle-icon"></span>
+      <span class="nav__toggle-icon"></span>
+      <span class="nav__toggle-icon"></span>
+    </button>
+
+    <nav id="primary-navigation" class="nav__menu">
+      <ul class="nav__links">
+        <li class="nav__item"><a href="/" class="nav__link nav__link--active">Home</a></li>
+        <li class="nav__item"><a href="/about/" class="nav__link">About</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="#" class="nav__link" aria-haspopup="true" aria-expanded="false">Services</a>
+          <ul class="nav__dropdown">
+            <li><a href="/data-engineering/" class="nav__link">Data Engineering</a></li>
+            <li><a href="/data-analytics/" class="nav__link">Data Analytics</a></li>
+            <li><a href="/data-governance/" class="nav__link">Data Governance</a></li>
+            <li><a href="/cloud-migration-and-management/" class="nav__link">Cloud Data Migration</a></li>
+            <li><a href="/quality-assurance/" class="nav__link">Quality Assurance</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="/blog/" class="nav__link">Blog</a></li>
+        <li class="nav__item"><a href="/contact/" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__actions">
+      <a href="/contact/" class="btn btn--sm btn--ghost">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">

@@ -1,0 +1,25 @@
+{
+    "name": "extrodata-site-agent",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "runArgs": [
+        "--add-host=host.docker.internal:host-gateway",
+        "--env-file",
+        "${localWorkspaceFolder}/.env"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ritwickdey.LiveServer",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    }
+}
