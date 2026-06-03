@@ -1,0 +1,58 @@
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent" class="cookie-consent" role="alert" aria-live="polite" style="display:none;">
+  <div class="cookie-consent__inner container">
+    <div class="cookie-consent__content">
+      <svg class="cookie-consent__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+      <p class="cookie-consent__text">
+        We use essential cookies to make this site work and analytics cookies to understand how you navigate the site. 
+        <a href="/privacy-policy/">Learn more</a>.
+      </p>
+    </div>
+    <div class="cookie-consent__actions">
+      <button type="button" class="btn btn--ghost cookie-consent__decline" aria-label="Decline non-essential cookies">Decline</button>
+      <button type="button" class="btn btn--primary cookie-consent__accept" aria-label="Accept all cookies">Accept All</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var consent = localStorage.getItem('cookie_consent');
+  var banner = document.getElementById('cookie-consent');
+  var acceptBtn = document.querySelector('.cookie-consent__accept');
+  var declineBtn = document.querySelector('.cookie-consent__decline');
+
+  if (!consent && banner) {
+    // Show banner after a short delay for smooth entrance
+    setTimeout(function() {
+      banner.style.display = 'block';
+      banner.classList.add('cookie-consent--visible');
+    }, 500);
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function() {
+      localStorage.setItem('cookie_consent', 'accepted');
+      banner.classList.remove('cookie-consent--visible');
+      setTimeout(function() { banner.style.display = 'none'; }, 300);
+      // Initialize analytics here if needed
+      initAnalytics();
+    });
+  }
+
+  if (declineBtn) {
+    declineBtn.addEventListener('click', function() {
+      localStorage.setItem('cookie_consent', 'declined');
+      banner.classList.remove('cookie-consent--visible');
+      setTimeout(function() { banner.style.display = 'none'; }, 300);
+    });
+  }
+
+  function initAnalytics() {
+    // Add analytics initialization here (e.g., Plausible, Fathom, etc.)
+    // Example for Plausible:
+    // var d=document,s=d.createElement('script');s.src='https://plausible.io/js/script.js';
+    // d.getElementsByTagName('head')[0].appendChild(s);
+  }
+});
+</script>

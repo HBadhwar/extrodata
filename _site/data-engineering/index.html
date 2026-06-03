@@ -3,178 +3,464 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data Engineering – exd architects and builds scalable data pipelines, warehouses, and transformation layers on Snowflake, dbt, and Databricks.</title>
-  <link rel="stylesheet" href="/assets/css/main.css" media="all">
-  <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
-  <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="/assets/images/favicon-180.png">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="/assets/images/favicon-32.svg">
+  <link rel="icon" type="image/svg+xml" sizes="16x16" href="/assets/images/favicon-16.svg">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.svg">
+  <meta name="theme-color" content="#6366f1">
+  <meta name="msapplication-TileColor" content="#6366f1">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://extrodata.com/data-engineering/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Data Engineering &amp; Pipelines | Extrodata</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Data Engineering &amp; Pipelines" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Scalable ETL/ELT pipelines, data modelling, automated quality checks, and legacy system migration from Extrodata." />
+<meta name="twitter:description" property="og:description" content="Scalable ETL/ELT pipelines, data modelling, automated quality checks, and legacy system migration from Extrodata." />
+<link rel="canonical" href="https://extrodata.com/data-engineering/" />
+<meta property="og:url" content="https://extrodata.com/data-engineering/" />
+<meta property="og:site_name" content="Extrodata" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-06-03T13:56:47+00:00" />
+<meta property="article:modified_time" content="2026-06-03T13:56:47+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Data Engineering &amp; Pipelines" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-06-03T13:56:47+00:00","datePublished":"2026-06-03T13:56:47+00:00","description":"Scalable ETL/ELT pipelines, data modelling, automated quality checks, and legacy system migration from Extrodata.","headline":"Data Engineering &amp; Pipelines","mainEntityOfPage":{"@type":"WebPage","@id":"https://extrodata.com/data-engineering/"},"url":"https://extrodata.com/data-engineering/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Extrodata",
+    "url": "https://extrodata.com",
+    "logo": "https://extrodata.com/assets/images/logo.svg",
+    "description": "Extraordinary Data Insights — AI & Data consulting for the enterprise.",
+    "email": "hello@extrodata.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "London",
+      "addressCountry": "GB"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/extrodata",
+      "https://twitter.com/extrodata"
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<a class="skip-link screen-reader-text" href="#main-content">Skip to content</a>
-
-<!-- ==================== NAVIGATION ==================== -->
-<header class="nav" id="site-header">
-  <div class="nav__inner container">
-    <a href="/" class="nav__brand">
-      <!-- EXD Logo SVG -->
-      <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
-        <!-- Background pill -->
-        <rect width="48" height="32" rx="8" fill="url(#logo-bg)" />
-        <!-- EXD wordmark -->
-        <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#logo-text-grad)">EXD</text>
-        <defs>
-          <linearGradient id="logo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#06b6d4" stop-opacity="0.15"/>
-            <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
-          </linearGradient>
-          <linearGradient id="logo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#06b6d4"/>
-            <stop offset="1" stop-color="#8b5cf6"/>
-          </linearGradient>
-        </defs>
-      </svg>
+  <header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo" aria-label="Extrodata — Home">
+      <img src="/assets/images/logo.svg" alt="Extrodata Logo" class="header-logo" width="380" height="50">
     </a>
 
-    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
-      <span class="nav__toggle-icon"></span>
-      <span class="nav__toggle-icon"></span>
-      <span class="nav__toggle-icon"></span>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle-icon"></span>
+      <span class="nav-toggle-icon"></span>
+      <span class="nav-toggle-icon"></span>
     </button>
 
-    <nav id="primary-navigation" class="nav__menu">
-      <ul class="nav__links">
-        <li class="nav__item"><a href="/" class="nav__link nav__link--active">Home</a></li>
-        <li class="nav__item"><a href="/about/" class="nav__link">About</a></li>
-        <li class="nav__item nav__item--dropdown">
-          <a href="#" class="nav__link" aria-haspopup="true" aria-expanded="false">Services</a>
-          <ul class="nav__dropdown">
-            <li><a href="/data-engineering/" class="nav__link">Data Engineering</a></li>
-            <li><a href="/data-analytics/" class="nav__link">Data Analytics</a></li>
-            <li><a href="/data-governance/" class="nav__link">Data Governance</a></li>
-            <li><a href="/cloud-migration-and-management/" class="nav__link">Cloud Data Migration</a></li>
-            <li><a href="/quality-assurance/" class="nav__link">Quality Assurance</a></li>
+    <nav id="primary-nav" class="site-nav" aria-label="Primary Navigation">
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/ai-capabilities/" class="nav-link">AI Capabilities</a></li>
+
+        <!-- Services dropdown -->
+        <li class="nav-dropdown active-parent">
+          <a href="/services/" class="nav-link nav-dropdown__trigger active">
+            Services <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+          </a>
+          <ul class="nav-dropdown__menu">
+            <li><a href="/data-strategy/">Data Strategy &amp; Architecture</a></li>
+            <li><a href="/data-engineering/">Data Engineering &amp; Pipelines</a></li>
+            <li><a href="/analytics-bi/">Analytics &amp; BI</a></li>
+            <li><a href="/ai-machine-learning/">AI &amp; Machine Learning</a></li>
+            <li><a href="/cloud-data-platforms/">Cloud Data Platforms</a></li>
           </ul>
         </li>
-        <li class="nav__item"><a href="/blog/" class="nav__link">Blog</a></li>
-        <li class="nav__item"><a href="/contact/" class="nav__link">Contact</a></li>
-      </ul>
-    </nav>
 
-    <div class="nav__actions">
-      <a href="/contact/" class="btn btn--sm btn--ghost">Get Started</a>
+        <li><a href="/industries/" class="nav-link">Industries</a></li>
+        <li><a href="/case-studies/" class="nav-link">Case Studies</a></li>
+        <li><a href="/about/" class="nav-link">About</a></li>
+        <li><a href="/contact/" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button data-theme-toggle class="theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="sun" style="width:18px;height:18px;" class="theme-icon-light"></i>
+          <i data-lucide="moon" style="width:18px;height:18px;display:none;" class="theme-icon-dark"></i>
+        </button>
+        <a href="/contact/" class="btn btn--primary btn--sm">Book a Call</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile overlay nav -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+    <ul class="mobile-nav-links">
+      <li><a href="/" class="mobile-nav-link">Home</a></li>
+      <li><a href="/ai-capabilities/" class="mobile-nav-link">AI Capabilities</a></li>
+      <li><a href="/services/" class="mobile-nav-link mobile-nav-link--section">Services</a></li>
+      <li class="mobile-nav-sub"><a href="/data-strategy/" class="mobile-nav-link">Data Strategy &amp; Architecture</a></li>
+      <li class="mobile-nav-sub"><a href="/data-engineering/" class="mobile-nav-link">Data Engineering &amp; Pipelines</a></li>
+      <li class="mobile-nav-sub"><a href="/analytics-bi/" class="mobile-nav-link">Analytics &amp; BI</a></li>
+      <li class="mobile-nav-sub"><a href="/ai-machine-learning/" class="mobile-nav-link">AI &amp; Machine Learning</a></li>
+      <li class="mobile-nav-sub"><a href="/cloud-data-platforms/" class="mobile-nav-link">Cloud Data Platforms</a></li>
+      <li><a href="/industries/" class="mobile-nav-link">Industries</a></li>
+      <li><a href="/case-studies/" class="mobile-nav-link">Case Studies</a></li>
+      <li><a href="/about/" class="mobile-nav-link">About</a></li>
+      <li><a href="/contact/" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-actions">
+      <a href="/contact/" class="btn btn--primary btn--sm">Book a Call</a>
     </div>
   </div>
 </header>
 
-<main id="main-content">
 
-<section class="page-hero">
-  <div class="container">
-    <h1 class="gradient-text">Data Engineering</h1>
-    <p class="lead">Scalable data foundations engineered for reliability.</p>
-  </div>
-</section>
+  <main id="main-content">
+    
+<div class="page-hero container">
+  <h1 class="page-hero__title reveal">Data Engineering &amp; Pipelines</h1>
+  
+  <p class="page-hero__subtitle reveal">We build the pipelines, models, and platforms that turn raw data into a reliable, scalable enterprise asset — ready for analytics and AI.</p>
+  
+</div>
 
+
+<div class="container">
+  <!-- ═══════════════════════════════════════════════════════
+     SERVICE OVERVIEW — Split layout with image
+     ═══════════════════════════════════════════════════════ -->
 <section class="section">
   <div class="container">
-    <div class="service-detail">
-      <p>We architect and build the infrastructure that every data strategy depends on. Our engineering work focuses on three outcomes: pipelines that run without incident, warehouses that query in milliseconds, and transformation layers that your team can maintain independently.</p>
+    <div class="service-overview-split">
 
-      <h2>What We Build</h2>
-      <ul class="service-features">
-        <li>ETL/ELT pipeline design and implementation with Airflow, dbt, or Azure Data Factory</li>
-        <li>Snowflake and Databricks warehouse architecture — modeled for performance and cost efficiency</li>
-        <li>Real-time streaming pipelines using Kafka, Kinesis, or Snowpipe</li>
-        <li>Data quality frameworks with automated validation at every pipeline stage</li>
-        <li>Infrastructure-as-code deployment with Terraform or Azure Resource Manager</li>
-      </ul>
+      <div class="service-overview__text reveal-left">
+        <span class="badge" style="margin-bottom: var(--space-4);">Core Service</span>
+        <h3 style="font-family: var(--font-display); font-size: var(--text-xl); margin-bottom: var(--space-4);">Great data engineering is invisible — until it breaks.</h3>
+        <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-4);">Your analysts, scientists, and executives depend on data that arrives on time, in the right shape, and with quality they can trust. We design and build the engineering foundations that make that happen — pipelines that scale, models that are maintainable, and platforms that your team can actually work with.</p>
+        <p style="color: var(--color-text-muted); line-height: 1.7;">Whether you're ingesting millions of events per second or consolidating legacy databases into a modern cloud platform, we bring senior engineering discipline to every layer of the stack.</p>
+      </div>
 
-      <h2>Our Approach</h2>
-      <p>We treat data infrastructure as software. Every pipeline is version-controlled, tested, and deployed through CI/CD. We model data using dimensional design principles, document every transformation, and build observability into the platform from day one — not as an afterthought.</p>
+      <div class="service-overview__image reveal-right">
+        <img src="/assets/images/data-eng-2.jpg" alt="Data engineering pipelines" loading="lazy">
+      </div>
 
-      <h2>Technologies</h2>
-      <p>Snowflake, dbt, Databricks, Apache Spark, Airflow, Kafka, Snowpipe, Azure Data Factory, Python, SQL, Terraform, Git/CI-CD.</p>
     </div>
   </div>
 </section>
 
-<section class="cta-section">
+<!-- ═══════════════════════════════════════════════════════
+     CAPABILITIES — 2-column detail grid
+     ═══════════════════════════════════════════════════════ -->
+<section class="section" style="background: var(--color-surface);">
   <div class="container">
-    <h2>Let's Discuss Your Data Architecture</h2>
-    <a href="/contact/" class="btn btn--primary">Start the Conversation</a>
+    <h2 class="reveal-up" style="text-align: center; margin-bottom: var(--space-8);">What We Deliver</h2>
+    <div class="capability-detail-grid">
+
+      <div class="capability-detail-card reveal-stagger" data-stagger="0">
+        <div class="capability-detail-card__icon">
+          <i data-lucide="workflow" style="width:28px;height:28px;"></i>
+        </div>
+        <h4 class="capability-detail-card__title">ETL/ELT Pipeline Development</h4>
+        <p class="capability-detail-card__desc">We build pipelines that are reliable, observable, and easy to extend. From batch nightly loads to real-time streaming ingestion — we choose the right pattern for your data volume and latency requirements.</p>
+        <ul class="capability-detail-card__list">
+          <li>Batch and real-time data ingestion from any source</li>
+          <li>Orchestration with Airflow, dbt Cloud, or cloud-native tools</li>
+          <li>Error handling, retry logic, and dead-letter queue management</li>
+          <li>Pipeline monitoring, alerting, and SLA tracking</li>
+        </ul>
+      </div>
+
+      <div class="capability-detail-card reveal-stagger" data-stagger="1">
+        <div class="capability-detail-card__icon">
+          <i data-lucide="database" style="width:28px;height:28px;"></i>
+        </div>
+        <h4 class="capability-detail-card__title">Data Modelling</h4>
+        <p class="capability-detail-card__desc">Good data models make everything downstream faster and cheaper. We apply proven modelling patterns — dimensional, data vault, or One Big Table — matched to your query patterns and team skills.</p>
+        <ul class="capability-detail-card__list">
+          <li>Dimensional modelling for analytics and reporting</li>
+          <li>Data Vault 2.0 for highly regulated environments</li>
+          <li>One Big Table (OBT) patterns for modern cloud warehouses</li>
+          <li>Data dictionary and metadata management</li>
+        </ul>
+      </div>
+
+      <div class="capability-detail-card reveal-stagger" data-stagger="2">
+        <div class="capability-detail-card__icon">
+          <i data-lucide="check-circle-2" style="width:28px;height:28px;"></i>
+        </div>
+        <h4 class="capability-detail-card__title">Data Quality &amp; Monitoring</h4>
+        <p class="capability-detail-card__desc">We embed quality checks at every stage of the pipeline so problems are caught early, not by your end users. Automated testing, profiling, and alerting give your team confidence in every dataset.</p>
+        <ul class="capability-detail-card__list">
+          <li>Automated data quality tests with Great Expectations or dbt tests</li>
+          <li>Data profiling and anomaly detection</li>
+          <li>Freshness, completeness, and uniqueness monitoring</li>
+          <li>Quality dashboards and stakeholder reporting</li>
+        </ul>
+      </div>
+
+      <div class="capability-detail-card reveal-stagger" data-stagger="3">
+        <div class="capability-detail-card__icon">
+          <i data-lucide="arrow-up-right" style="width:28px;height:28px;"></i>
+        </div>
+        <h4 class="capability-detail-card__title">Migration &amp; Modernisation</h4>
+        <p class="capability-detail-card__desc">Moving off legacy systems is high-risk and high-reward. We plan and execute migrations with minimal disruption — validating data at every step and maintaining parallel runs until you're confident in the new platform.</p>
+        <ul class="capability-detail-card__list">
+          <li>On-premise to cloud migration with zero downtime</li>
+          <li>Legacy warehouse replacement (Teradata, Netezza, Greenplum)</li>
+          <li>Schema conversion and data reconciliation</li>
+          <li>Parallel run strategy and cutover planning</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 </section>
 
-</main><!-- #main-content -->
-
-<footer class="footer" id="footer">
+<!-- ═══════════════════════════════════════════════════════
+     OUR APPROACH — 4-step timeline
+     ═══════════════════════════════════════════════════════ -->
+<section class="section">
   <div class="container">
-    <div class="footer__grid">
+    <h2 class="reveal-up" style="text-align: center; margin-bottom: var(--space-10);">Our Approach</h2>
+    <div class="timeline reveal-up">
 
-      <div class="footer__brand">
-        <svg class="footer__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
-          <rect width="48" height="32" rx="8" fill="url(#flogo-bg)" />
-          <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#flogo-text-grad)">EXD</text>
-          <defs>
-            <linearGradient id="flogo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#06b6d4" stop-opacity="0.15"/>
-              <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
-            </linearGradient>
-            <linearGradient id="flogo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#06b6d4"/>
-              <stop offset="1" stop-color="#8b5cf6"/>
-            </linearGradient>
-          </defs>
-        </svg>
-        <p>At Extrodata, we are committed to transforming your raw data into valuable insights, enabling your business to thrive in the digital age. Our comprehensive suite of data engineering services is designed to streamline your data pipelines, enhance data quality, and empower your organization to make informed decisions.</p>
+      <div class="timeline__step">
+        <div class="timeline__number">1</div>
+        <h4 class="timeline__title">Audit</h4>
+        <p class="timeline__desc">We inventory every data source, pipeline, and consumer — mapping dependencies and identifying fragility points.</p>
       </div>
 
-      <nav class="footer__nav" aria-label="Footer Navigation">
-        <h4 class="footer__heading">Quick Links</h4>
-        <ul class="footer__links">
-          <li><a href="/">Home</a></li>
+      <div class="timeline__step">
+        <div class="timeline__number">2</div>
+        <h4 class="timeline__title">Architect</h4>
+        <p class="timeline__desc">We design the target pipeline architecture, choosing tools and patterns that match your volume, velocity, and team skills.</p>
+      </div>
+
+      <div class="timeline__step">
+        <div class="timeline__number">3</div>
+        <h4 class="timeline__title">Build</h4>
+        <p class="timeline__desc">We develop pipelines iteratively — starting with your highest-priority data flows and expanding coverage each sprint.</p>
+      </div>
+
+      <div class="timeline__step">
+        <div class="timeline__number">4</div>
+        <h4 class="timeline__title">Operate</h4>
+        <p class="timeline__desc">We hand over production-ready pipelines with monitoring, documentation, and training — or stay on retainer to operate them.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     TECH STACK — Simple Icons logos
+     ═══════════════════════════════════════════════════════ -->
+<section class="section" style="background: var(--color-surface);">
+  <div class="container">
+    <h2 class="reveal-up" style="text-align: center; margin-bottom: var(--space-8);">Tools We Use</h2>
+    <div class="tech-grid reveal-up">
+
+      <div class="tech-logo">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/dbt.svg" alt="dbt" loading="lazy">
+        <span class="tech-logo__label">dbt</span>
+      </div>
+
+      <div class="tech-logo">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/apachespark.svg" alt="Spark" loading="lazy">
+        <span class="tech-logo__label">Spark</span>
+      </div>
+
+      <div class="tech-logo">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt="Python" loading="lazy">
+        <span class="tech-logo__label">Python</span>
+      </div>
+
+      <div class="tech-logo">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/snowflake.svg" alt="Snowflake" loading="lazy">
+        <span class="tech-logo__label">Snowflake</span>
+      </div>
+
+      <div class="tech-logo">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/databricks.svg" alt="Databricks" loading="lazy">
+        <span class="tech-logo__label">Databricks</span>
+      </div>
+
+      <div class="tech-logo">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postgresql.svg" alt="PostgreSQL" loading="lazy">
+        <span class="tech-logo__label">PostgreSQL</span>
+      </div>
+
+      <div class="tech-logo">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlecloud.svg" alt="Google Cloud" loading="lazy">
+        <span class="tech-logo__label">Google Cloud</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CTA BANNER
+     ═══════════════════════════════════════════════════════ -->
+<div class="cta-banner reveal">
+  <div class="container">
+    <h2 class="cta-banner__heading">Ready to unlock extraordinary insights?</h2>
+    <a href="/contact/" class="btn btn--primary btn--lg">Book a Discovery Call</a>
+  </div>
+</div>
+
+
+</div>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <!-- Column 1: Brand -->
+      <div class="footer-col footer-col--brand">
+        <a href="/" class="logo" aria-label="Extrodata — Home">
+          <img src="/assets/images/logo-icon.svg" alt="" class="logo-mark" width="48" height="48" aria-hidden="true">
+          <span class="wordmark">Extrodata</span>
+        </a>
+        <p class="footer-tagline">Extraordinary Data Insights — From Strategy to Scale</p>
+        <p class="footer-explanation">EXD = Extraordinary Data Insights</p>
+      </div>
+
+      <!-- Column 2: Services -->
+      <nav class="footer-col" aria-label="Services">
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="/services/#data-strategy">Data Strategy</a></li>
+          <li><a href="/services/#data-engineering">Data Engineering</a></li>
+          <li><a href="/services/#analytics-bi">Analytics &amp; BI</a></li>
+          <li><a href="/ai-capabilities/">AI &amp; Machine Learning</a></li>
+          <li><a href="/services/#cloud-platforms">Cloud Platforms</a></li>
+        </ul>
+      </nav>
+
+      <!-- Column 3: Company -->
+      <nav class="footer-col" aria-label="Company">
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
           <li><a href="/about/">About</a></li>
-          <li><a href="/blog/">Blogs</a></li>
+          <li><a href="/case-studies/">Case Studies</a></li>
+          <li><a href="/insights/">Insights</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="footer__contact">
-        <h4 class="footer__heading">Contact</h4>
-        <p class="footer__contact-label">For any enquiries, please email</p>
-        <a href="mailto:ContactUs@Extrodata.com" class="footer__email">ContactUs@Extrodata.com</a>
-        <div class="footer__social" aria-label="Social Media Links">
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-        </div>
+      <!-- Column 4: Get in Touch -->
+      <div class="footer-col footer-col--contact">
+        <h4 class="footer-heading">Get in Touch</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <a href="mailto:hello@extrodata.com" class="footer-contact-link">
+              hello@extrodata.com
+            </a>
+          </li>
+          <li class="footer-location">London, UK</li>
+          <li>
+            <a href="https://www.linkedin.com/company/extrodata" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
 
     </div>
-  </div>
-  <div class="footer__bottom">
-    <div class="container">
-      <p>&copy; 2026 Extrodata. All Rights Reserved.</p>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Extrodata Ltd &middot; London, UK &middot; All rights reserved</p>
+      <div class="footer-legal">
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <span class="legal-separator">&middot;</span>
+        <a href="/terms/">Terms</a>
+      </div>
     </div>
   </div>
 </footer>
 
-<a href="#site-header" class="go-top" aria-label="Back to top">
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M5 15L12 8L19 15"/></svg>
-</a>
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent" class="cookie-consent" role="alert" aria-live="polite" style="display:none;">
+  <div class="cookie-consent__inner container">
+    <div class="cookie-consent__content">
+      <svg class="cookie-consent__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+      <p class="cookie-consent__text">
+        We use essential cookies to make this site work and analytics cookies to understand how you navigate the site. 
+        <a href="/privacy-policy/">Learn more</a>.
+      </p>
+    </div>
+    <div class="cookie-consent__actions">
+      <button type="button" class="btn btn--ghost cookie-consent__decline" aria-label="Decline non-essential cookies">Decline</button>
+      <button type="button" class="btn btn--primary cookie-consent__accept" aria-label="Accept all cookies">Accept All</button>
+    </div>
+  </div>
+</div>
 
-<script src="/assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var consent = localStorage.getItem('cookie_consent');
+  var banner = document.getElementById('cookie-consent');
+  var acceptBtn = document.querySelector('.cookie-consent__accept');
+  var declineBtn = document.querySelector('.cookie-consent__decline');
+
+  if (!consent && banner) {
+    // Show banner after a short delay for smooth entrance
+    setTimeout(function() {
+      banner.style.display = 'block';
+      banner.classList.add('cookie-consent--visible');
+    }, 500);
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function() {
+      localStorage.setItem('cookie_consent', 'accepted');
+      banner.classList.remove('cookie-consent--visible');
+      setTimeout(function() { banner.style.display = 'none'; }, 300);
+      // Initialize analytics here if needed
+      initAnalytics();
+    });
+  }
+
+  if (declineBtn) {
+    declineBtn.addEventListener('click', function() {
+      localStorage.setItem('cookie_consent', 'declined');
+      banner.classList.remove('cookie-consent--visible');
+      setTimeout(function() { banner.style.display = 'none'; }, 300);
+    });
+  }
+
+  function initAnalytics() {
+    // Add analytics initialization here (e.g., Plausible, Fathom, etc.)
+    // Example for Plausible:
+    // var d=document,s=d.createElement('script');s.src='https://plausible.io/js/script.js';
+    // d.getElementsByTagName('head')[0].appendChild(s);
+  }
+});
+</script>
+
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
-

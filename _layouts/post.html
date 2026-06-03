@@ -2,27 +2,22 @@
 layout: default
 ---
 
-<article class="post-article">
-  <header class="post-header">
-    <div class="container">
-      {% if page.categories %}
-        {% for category in page.categories %}
-          <span class="post-tag">{{ category }}</span>
-        {% endfor %}
-      {% endif %}
-      <h1 class="post-title">{{ page.title }}</h1>
-      <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%B %d, %Y" }}
-      </time>
-      {% if page.excerpt %}
-        <p class="post-excerpt">{{ page.excerpt }}</p>
-      {% endif %}
+<article class="post-article container">
+  <header class="reveal">
+    <h1>{{ page.title }}</h1>
+    <div class="post-article__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+      <span>&middot;</span>
+      <span>{% assign words = page.content | number_of_words %}
+        {% if words <= 200 %}1 min read
+        {% elsif words <= 500 %}~{{ words | divided_by: 200 | plus: 1 }} min read
+        {% else %}~{{ words | divided_by: 200 }} min read
+        {% endif %}
+      </span>
     </div>
   </header>
 
-  <div class="container">
-    <div class="post-content">
-      {{ content }}
-    </div>
+  <div class="post-article__content reveal">
+    {{ content }}
   </div>
 </article>

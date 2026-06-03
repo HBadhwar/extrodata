@@ -1,10 +1,49 @@
-name: "Extrodata AI & Data Consulting"
-description: "Data-Driven AI Transformation"
+title: Extrodata
+description: "Extraordinary Data Insights — AI & Data consulting for the enterprise."
+baseurl: ""
+url: "https://extrodata.com"
+email: hello@extrodata.com
+twitter_username: extrodata
+linkedin_username: extrodata
+
+# Social media / Open Graph
+social:
+  name: Extrodata
+  links:
+    - https://linkedin.com/company/extrodata
+    - https://twitter.com/extrodata
+
+# SEO settings
+seo:
+  tag_type: website
+
 # Allow future-dated posts during development
 future: true
+
 # Permalink structure for blog posts
-permalink: /blog/:year/:month/:day/:title.html
-# Exclude dev files and old static blog pages from being compiled into the final site
+permalink: /insights/:year/:month/:day/:title.html
+
+collections:
+  pages:
+    output: true
+    permalink: /:title/
+
+defaults:
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 exclude:
   - .devcontainer/
   - .opencode/
@@ -12,8 +51,6 @@ exclude:
   - .env
   - .jekyll-cache/
   - _site/
-  - blog/cybersecurity-lms/
-  - blog/execute-immediate-snowsql/
-  - blog/near-real-time-data-ingestion/
-  - blog/what-is-data-cloud/
-  - blog/category/
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock

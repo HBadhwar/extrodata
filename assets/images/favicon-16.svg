@@ -1,0 +1,6 @@
+<!-- Extrodata Favicon - 16x16 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <rect width="16" height="16" rx="3" fill="#6366f1"/>
+  <path d="M5 6 L10 6 M5 8 L11 8 M5 10 L10 10" 
+        fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+</svg>

@@ -1,71 +1,68 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | default: site.title }}{% if page.description %} – {{ page.description }}{% endif %}</title>
-  <link rel="stylesheet" href="/assets/css/main.css" media="all">
-  <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
-  <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="/assets/images/favicon-180.png">
-</head>
-
-<body>
-
-<a class="skip-link screen-reader-text" href="#main-content">Skip to content</a>
-
-<!-- ==================== NAVIGATION ==================== -->
-<header class="nav" id="site-header">
-  <div class="nav__inner container">
-    <a href="/" class="nav__brand">
-      <!-- EXD Logo SVG -->
-      <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
-        <!-- Background pill -->
-        <rect width="48" height="32" rx="8" fill="url(#logo-bg)" />
-        <!-- EXD wordmark -->
-        <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#logo-text-grad)">EXD</text>
-        <defs>
-          <linearGradient id="logo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#06b6d4" stop-opacity="0.15"/>
-            <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
-          </linearGradient>
-          <linearGradient id="logo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#06b6d4"/>
-            <stop offset="1" stop-color="#8b5cf6"/>
-          </linearGradient>
-        </defs>
-      </svg>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo" aria-label="Extrodata — Home">
+      <img src="/assets/images/logo.svg" alt="Extrodata Logo" class="header-logo" width="380" height="50">
     </a>
 
-    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
-      <span class="nav__toggle-icon"></span>
-      <span class="nav__toggle-icon"></span>
-      <span class="nav__toggle-icon"></span>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle-icon"></span>
+      <span class="nav-toggle-icon"></span>
+      <span class="nav-toggle-icon"></span>
     </button>
 
-    <nav id="primary-navigation" class="nav__menu">
-      <ul class="nav__links">
-        <li class="nav__item"><a href="/" class="nav__link nav__link--active">Home</a></li>
-        <li class="nav__item"><a href="/about/" class="nav__link">About</a></li>
-        <li class="nav__item nav__item--dropdown">
-          <a href="#" class="nav__link" aria-haspopup="true" aria-expanded="false">Services</a>
-          <ul class="nav__dropdown">
-            <li><a href="/data-engineering/" class="nav__link">Data Engineering</a></li>
-            <li><a href="/data-analytics/" class="nav__link">Data Analytics</a></li>
-            <li><a href="/data-governance/" class="nav__link">Data Governance</a></li>
-            <li><a href="/cloud-migration-and-management/" class="nav__link">Cloud Data Migration</a></li>
-            <li><a href="/quality-assurance/" class="nav__link">Quality Assurance</a></li>
+    <nav id="primary-nav" class="site-nav" aria-label="Primary Navigation">
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
+        <li><a href="/ai-capabilities/" class="nav-link{% if page.url == '/ai-capabilities/' %} active{% endif %}">AI Capabilities</a></li>
+
+        <!-- Services dropdown -->
+        <li class="nav-dropdown{% if page.url == '/services/' or page.url == '/data-strategy/' or page.url == '/data-engineering/' or page.url == '/analytics-bi/' or page.url == '/ai-machine-learning/' or page.url == '/cloud-data-platforms/' %} active-parent{% endif %}">
+          <a href="/services/" class="nav-link nav-dropdown__trigger{% if page.url == '/services/' or page.url == '/data-strategy/' or page.url == '/data-engineering/' or page.url == '/analytics-bi/' or page.url == '/ai-machine-learning/' or page.url == '/cloud-data-platforms/' %} active{% endif %}">
+            Services <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+          </a>
+          <ul class="nav-dropdown__menu">
+            <li><a href="/data-strategy/">Data Strategy &amp; Architecture</a></li>
+            <li><a href="/data-engineering/">Data Engineering &amp; Pipelines</a></li>
+            <li><a href="/analytics-bi/">Analytics &amp; BI</a></li>
+            <li><a href="/ai-machine-learning/">AI &amp; Machine Learning</a></li>
+            <li><a href="/cloud-data-platforms/">Cloud Data Platforms</a></li>
           </ul>
         </li>
-        <li class="nav__item"><a href="/blog/" class="nav__link">Blog</a></li>
-        <li class="nav__item"><a href="/contact/" class="nav__link">Contact</a></li>
-      </ul>
-    </nav>
 
-    <div class="nav__actions">
-      <a href="/contact/" class="btn btn--sm btn--ghost">Get Started</a>
+        <li><a href="/industries/" class="nav-link{% if page.url == '/industries/' %} active{% endif %}">Industries</a></li>
+        <li><a href="/case-studies/" class="nav-link{% if page.url == '/case-studies/' %} active{% endif %}">Case Studies</a></li>
+        <li><a href="/about/" class="nav-link{% if page.url == '/about/' %} active{% endif %}">About</a></li>
+        <li><a href="/contact/" class="nav-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button data-theme-toggle class="theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="sun" style="width:18px;height:18px;" class="theme-icon-light"></i>
+          <i data-lucide="moon" style="width:18px;height:18px;display:none;" class="theme-icon-dark"></i>
+        </button>
+        <a href="/contact/" class="btn btn--primary btn--sm">Book a Call</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile overlay nav -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+    <ul class="mobile-nav-links">
+      <li><a href="/" class="mobile-nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
+      <li><a href="/ai-capabilities/" class="mobile-nav-link{% if page.url == '/ai-capabilities/' %} active{% endif %}">AI Capabilities</a></li>
+      <li><a href="/services/" class="mobile-nav-link mobile-nav-link--section{% if page.url == '/services/' %} active{% endif %}">Services</a></li>
+      <li class="mobile-nav-sub"><a href="/data-strategy/" class="mobile-nav-link">Data Strategy &amp; Architecture</a></li>
+      <li class="mobile-nav-sub"><a href="/data-engineering/" class="mobile-nav-link">Data Engineering &amp; Pipelines</a></li>
+      <li class="mobile-nav-sub"><a href="/analytics-bi/" class="mobile-nav-link">Analytics &amp; BI</a></li>
+      <li class="mobile-nav-sub"><a href="/ai-machine-learning/" class="mobile-nav-link">AI &amp; Machine Learning</a></li>
+      <li class="mobile-nav-sub"><a href="/cloud-data-platforms/" class="mobile-nav-link">Cloud Data Platforms</a></li>
+      <li><a href="/industries/" class="mobile-nav-link{% if page.url == '/industries/' %} active{% endif %}">Industries</a></li>
+      <li><a href="/case-studies/" class="mobile-nav-link{% if page.url == '/case-studies/' %} active{% endif %}">Case Studies</a></li>
+      <li><a href="/about/" class="mobile-nav-link{% if page.url == '/about/' %} active{% endif %}">About</a></li>
+      <li><a href="/contact/" class="mobile-nav-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-actions">
+      <a href="/contact/" class="btn btn--primary btn--sm">Book a Call</a>
     </div>
   </div>
 </header>
-
-<main id="main-content">

@@ -1,0 +1,26 @@
+{
+  "name": "Extrodata - AI & Data Consultancy",
+  "short_name": "Extrodata",
+  "description": "Specialist AI and Data consultancy delivering extraordinary outcomes through senior-only expertise.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "/assets/images/favicon-16.svg",
+      "sizes": "16x16",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/images/favicon-32.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/images/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ]
+}

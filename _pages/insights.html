@@ -1,0 +1,46 @@
+---
+layout: page
+title: "Insights"
+hero_title: "Insights &amp; Thinking"
+hero_subtitle: "Practical perspectives on AI, data strategy, and enterprise transformation from the EXD team."
+description: "Read articles, case studies, and thought leadership from Extrodata's AI and Data experts."
+permalink: /insights/
+---
+
+<!-- ═══════════════════════════════════════════════════════
+     1. POSTS GRID — Jekyll collection loop
+     ═══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="posts-grid">
+
+      {% for post in site.posts %}
+      <article class="post-card reveal">
+        {% if post.featured_image %}
+        <div class="post-card__image">
+          <img src="{{ post.featured_image }}" alt="{{ post.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <p class="post-card__meta">{{ post.date | date: "%B %d, %Y" }} · {{ post.reading_time | at_least: 1 }} min read</p>
+        <h3 class="post-card__title"><a href="{{ post.url }}" style="color:inherit;text-decoration:none;">{{ post.title }}</a></h3>
+        <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <a href="{{ post.url }}" class="card__link">Read more <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+      </article>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     2. NEWSLETTER CTA (future-proof placeholder)
+     ═══════════════════════════════════════════════════════ -->
+<section class="section--sm">
+  <div class="container">
+    <div class="ai-readiness-cta reveal" style="border-color:var(--color-border);">
+      <h3 class="ai-readiness-cta__heading">Stay Updated</h3>
+      <p style="color:var(--color-text-muted);margin-bottom:var(--space-6);max-width:50ch;margin-left:auto;margin-right:auto;">We publish new insights monthly. Follow us on LinkedIn for daily thinking on AI and data.</p>
+      <a href="https://linkedin.com/company/extrodata" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Follow on LinkedIn</a>
+    </div>
+  </div>
+</section>

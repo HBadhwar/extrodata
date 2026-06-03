@@ -1,0 +1,24 @@
+<!-- Extrodata White Logo - For dark backgrounds -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 50" width="400" height="50">
+  <!-- Icon Mark: Abstract data node / "E" shape -->
+  <g transform="translate(0, 5)">
+    <!-- Outer hexagon frame -->
+    <path d="M25 0 L47.3 12.5 L47.3 37.5 L25 50 L2.7 37.5 L2.7 12.5 Z" 
+          fill="none" stroke="#ffffff" stroke-width="3"/>
+    
+    <!-- Inner "E" / data flow lines -->
+    <path d="M15 15 L30 15 M15 25 L35 25 M15 35 L30 35" 
+          fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Connection dots -->
+    <circle cx="30" cy="15" r="2.5" fill="#ffffff"/>
+    <circle cx="35" cy="25" r="2.5" fill="#ffffff"/>
+    <circle cx="30" cy="35" r="2.5" fill="#ffffff"/>
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="65" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="28" font-weight="700" fill="#ffffff">
+    Extrodata
+  </text>
+</svg>
