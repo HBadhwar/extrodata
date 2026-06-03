@@ -1,7 +1,7 @@
 title: Extrodata
 description: "Extraordinary Data Insights — AI & Data consulting for the enterprise."
 baseurl: ""
-url: "https://extrodata.com"
+url: ""
 email: hello@extrodata.com
 twitter_username: extrodata
 linkedin_username: extrodata
@@ -43,6 +43,9 @@ defaults:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+sass:
+  style: compressed
 
 exclude:
   - .devcontainer/
