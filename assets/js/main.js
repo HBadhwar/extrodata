@@ -7,28 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 0. Theme Toggle (Dark Default) ─────────────────────── */
 
-  const themeToggle = document.querySelector('[data-theme-toggle]');
-  const iconLight = document.querySelector('.theme-icon-light');
-  const iconDark = document.querySelector('.theme-icon-dark');
+  const themeToggles = document.querySelectorAll('[data-theme-toggle]');
 
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    if (iconLight && iconDark) {
-      // In dark mode (default): show sun icon (to switch to light)
-      // In light mode: show moon icon (to switch to dark)
-      iconLight.style.display = theme === 'dark' ? 'block' : 'none';
-      iconDark.style.display = theme === 'dark' ? 'none' : 'block';
-    }
+    // Sync all icon pairs across desktop + mobile toggles
+    document.querySelectorAll('.theme-icon-light').forEach(icon => {
+      icon.style.display = theme === 'dark' ? 'block' : 'none';
+    });
+    document.querySelectorAll('.theme-icon-dark').forEach(icon => {
+      icon.style.display = theme === 'dark' ? 'none' : 'block';
+    });
   }
 
   // Determine initial theme: localStorage → default 'dark'
   const storedTheme = localStorage.getItem('theme') || 'dark';
   setTheme(storedTheme);
 
-  // Toggle on click
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
+  // Toggle on click (works for both desktop and mobile buttons)
+  themeToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');
       const next = current === 'dark' ? 'light' : 'dark';
       setTheme(next);
@@ -37,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
       }
     });
-  }
+  });
 
   /* ── 1. Hero Video Play Fallback ─────────────────────────── */
 
