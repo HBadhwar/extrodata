@@ -131,7 +131,7 @@ permalink: /contact/
             Send Message
           </button>
 
-          <p class="form-note">By submitting this form you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+          <p class="form-note">By submitting this form you agree to our <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>.</p>
         </form>
 
         <!-- Success message -->
@@ -141,7 +141,7 @@ permalink: /contact/
           </div>
           <h4 class="contact-success__title">Message Sent!</h4>
           <p class="contact-success__text">Thank you for reaching out. We'll get back to you within one business day.</p>
-          <a href="/contact/" class="btn btn--outline" id="send-another">Send Another Message</a>
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn--outline" id="send-another">Send Another Message</a>
         </div>
       </div>
 

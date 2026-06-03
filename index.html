@@ -15,14 +15,14 @@ permalink: /
     <video
       id="hero-video"
       class="hero-cinematic__video"
-      poster="/assets/images/data-cloud.jpg"
+      poster="{{ '/assets/images/data-cloud.jpg' | relative_url }}"
       autoplay
       muted
       loop
       playsinline
       preload="auto"
     >
-      <source src="/assets/images/banner-video.mp4" type="video/mp4">
+      <source src="{{ '/assets/images/banner-video.mp4' | relative_url }}" type="video/mp4">
     </video>
     <div class="hero-cinematic__overlay"></div>
   </div>
@@ -31,8 +31,8 @@ permalink: /
     <h1 class="page-hero__title reveal-up">{{ page.hero_title }}</h1>
     <p class="page-hero__subtitle reveal-up" style="transition-delay: 150ms;">{{ page.hero_subtitle }}</p>
     <div class="reveal-up" style="transition-delay: 300ms; margin-top: var(--space-8);">
-      <a href="/contact/" class="btn btn--primary btn--lg">Book a Discovery Call <span>&rarr;</span></a>
-      <a href="/services/" class="btn btn--ghost btn--lg hero-ghost-btn" style="margin-left: var(--space-4);">Explore Services</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn--primary btn--lg">Book a Discovery Call <span>&rarr;</span></a>
+      <a href="{{ '/services/' | relative_url }}" class="btn btn--ghost btn--lg hero-ghost-btn" style="margin-left: var(--space-4);">Explore Services</a>
     </div>
   </div>
 </div>
@@ -68,7 +68,7 @@ permalink: /
       <!-- Card 1 — Data Strategy & Architecture -->
       <div class="card reveal-stagger" data-stagger="0">
         <div class="card__media card__media--sm">
-          <img src="/assets/images/cloud-1.jpg" alt="Data Strategy and Architecture" loading="lazy">
+          <img src="{{ '/assets/images/cloud-1.jpg' | relative_url }}" alt="Data Strategy and Architecture" loading="lazy">
         </div>
         <div class="card__content">
           <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);">
@@ -76,14 +76,14 @@ permalink: /
             <h3 class="card__heading" style="margin-bottom:0;">Data Strategy &amp; Architecture</h3>
           </div>
           <p class="card__body">Enterprise data strategy, target-state architecture, governance frameworks, and roadmap prioritisation — aligned to business outcomes and built for scale.</p>
-          <a href="/data-strategy/" class="card__link">Learn more <span>&rarr;</span></a>
+          <a href="{{ '/data-strategy/' | relative_url }}" class="card__link">Learn more <span>&rarr;</span></a>
         </div>
       </div>
 
       <!-- Card 2 — Data Engineering -->
       <div class="card reveal-stagger" data-stagger="1">
         <div class="card__media card__media--sm">
-          <img src="/assets/images/data-eng-banner.jpg" alt="Data Engineering pipelines" loading="lazy">
+          <img src="{{ '/assets/images/data-eng-banner.jpg' | relative_url }}" alt="Data Engineering pipelines" loading="lazy">
         </div>
         <div class="card__content">
           <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);">
@@ -91,14 +91,14 @@ permalink: /
             <h3 class="card__heading" style="margin-bottom:0;">Data Engineering &amp; Pipelines</h3>
           </div>
           <p class="card__body">Scalable ETL/ELT pipelines, data modelling, automated quality checks, and legacy system migration — built for reliability and performance.</p>
-          <a href="/data-engineering/" class="card__link">Learn more <span>&rarr;</span></a>
+          <a href="{{ '/data-engineering/' | relative_url }}" class="card__link">Learn more <span>&rarr;</span></a>
         </div>
       </div>
 
       <!-- Card 3 — Analytics & BI -->
       <div class="card reveal-stagger" data-stagger="2">
         <div class="card__media card__media--sm">
-          <img src="/assets/images/data-analytics-banner.jpg" alt="Analytics and Business Intelligence dashboards" loading="lazy">
+          <img src="{{ '/assets/images/data-analytics-banner.jpg' | relative_url }}" alt="Analytics and Business Intelligence dashboards" loading="lazy">
         </div>
         <div class="card__content">
           <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);">
@@ -106,14 +106,14 @@ permalink: /
             <h3 class="card__heading" style="margin-bottom:0;">Analytics &amp; BI</h3>
           </div>
           <p class="card__body">Executive dashboards, self-service analytics, KPI frameworks, and data literacy programmes — turning data into clarity for every stakeholder.</p>
-          <a href="/analytics-bi/" class="card__link">Learn more <span>&rarr;</span></a>
+          <a href="{{ '/analytics-bi/' | relative_url }}" class="card__link">Learn more <span>&rarr;</span></a>
         </div>
       </div>
 
       <!-- Card 4 — AI & Machine Learning (featured) -->
       <div class="card card--featured reveal-stagger" data-stagger="3">
         <div class="card__media card__media--sm">
-          <img src="/assets/images/cybersecurity-image.jpg" alt="AI and Machine Learning solutions" loading="lazy">
+          <img src="{{ '/assets/images/cybersecurity-image.jpg' | relative_url }}" alt="AI and Machine Learning solutions" loading="lazy">
         </div>
         <div class="card__content">
           <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);">
@@ -121,14 +121,14 @@ permalink: /
             <h3 class="card__heading" style="margin-bottom:0;">AI &amp; Machine Learning</h3>
           </div>
           <p class="card__body">Production ML pipelines, generative AI integration, predictive analytics, and MLOps — moving AI from experiment to enterprise-grade deployment.</p>
-          <a href="/ai-machine-learning/" class="card__link">Learn more <span>&rarr;</span></a>
+          <a href="{{ '/ai-machine-learning/' | relative_url }}" class="card__link">Learn more <span>&rarr;</span></a>
         </div>
       </div>
 
       <!-- Card 5 — Cloud Data Platforms -->
       <div class="card reveal-stagger" data-stagger="4">
         <div class="card__media card__media--sm">
-          <img src="/assets/images/cloud-banner.jpg" alt="Cloud Data Platforms" loading="lazy">
+          <img src="{{ '/assets/images/cloud-banner.jpg' | relative_url }}" alt="Cloud Data Platforms" loading="lazy">
         </div>
         <div class="card__content">
           <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);">
@@ -136,7 +136,7 @@ permalink: /
             <h3 class="card__heading" style="margin-bottom:0;">Cloud Data Platforms</h3>
           </div>
           <p class="card__body">Cloud data warehouse design, lakehouse architecture, multi-cloud strategy, and platform operations — secure, cost-optimised, and built for the long term.</p>
-          <a href="/cloud-data-platforms/" class="card__link">Learn more <span>&rarr;</span></a>
+          <a href="{{ '/cloud-data-platforms/' | relative_url }}" class="card__link">Learn more <span>&rarr;</span></a>
         </div>
       </div>
 
@@ -149,7 +149,7 @@ permalink: /
      ═══════════════════════════════════════════════════════ -->
 <section class="section ai-teaser">
   <div class="ai-teaser__bg">
-    <img src="/assets/images/meduza2.jpg" alt="" aria-hidden="true" loading="lazy">
+    <img src="{{ '/assets/images/meduza2.jpg' | relative_url }}" alt="" aria-hidden="true" loading="lazy">
     <div class="ai-teaser__overlay"></div>
   </div>
   <div class="container ai-teaser__content" style="text-align:center; position: relative; z-index: 1;">
@@ -162,7 +162,7 @@ permalink: /
     </div>
     <p class="reveal-up" style="max-width:65ch;margin:var(--space-6) auto 0;color:var(--color-text-muted);line-height:1.7;">EXD brings rigour and commercial pragmatism to AI adoption — we focus on production-grade solutions, responsible deployment, and outcomes your board can see.</p>
     <div class="reveal-up" style="margin-top:var(--space-6);">
-      <a href="/ai-capabilities/" class="btn btn--outline">Explore AI Capabilities <span>&rarr;</span></a>
+      <a href="{{ '/ai-capabilities/' | relative_url }}" class="btn btn--outline">Explore AI Capabilities <span>&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -177,7 +177,7 @@ permalink: /
 
       <!-- Left: Image panel -->
       <div class="case-study-image reveal-left">
-        <img src="/assets/images/data-cloud.jpg" alt="Data cloud architecture for financial services" loading="lazy">
+        <img src="{{ '/assets/images/data-cloud.jpg' | relative_url }}" alt="Data cloud architecture for financial services" loading="lazy">
       </div>
 
       <!-- Right: Metrics + Narrative -->
@@ -200,7 +200,7 @@ permalink: /
           <p style="color:var(--color-text-muted);line-height:1.7;margin-top: var(--space-5);">A leading UK bank faced mounting pressure from evolving regulatory deadlines and fragmented data sources across twelve business units. EXD designed and deployed an automated reporting pipeline that consolidated data, validated outputs, and delivered compliant reports 42% faster.</p>
           <p style="color:var(--color-text-muted);line-height:1.7;margin-top: var(--space-3);">The solution identified &pound;2.3M in annual cost savings through process elimination and reduced manual reconciliation effort by over 600 hours per quarter.</p>
           <div style="margin-top:var(--space-5);">
-            <a href="/case-studies/" class="card__link">View all case studies <span>&rarr;</span></a>
+            <a href="{{ '/case-studies/' | relative_url }}" class="card__link">View all case studies <span>&rarr;</span></a>
           </div>
         </div>
       </div>
@@ -219,7 +219,7 @@ permalink: /
 
       <!-- Left: Team/collaboration image -->
       <div class="why-image reveal-left">
-        <img src="/assets/images/mask-group.jpg" alt="Extrodata team collaboration" loading="lazy">
+        <img src="{{ '/assets/images/mask-group.jpg' | relative_url }}" alt="Extrodata team collaboration" loading="lazy">
       </div>
 
       <!-- Right: 3-column value propositions -->
