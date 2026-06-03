@@ -1389,7 +1389,8 @@
 }
 
 [data-theme="light"] .mobile-nav-overlay {
-  background: #ffffff;
+  background-color: #ffffff;
+  z-index: 9999;
 }
 
 /* Dark mode (default) — trust bar logos inverted */
@@ -1405,7 +1406,8 @@
 
 /* Dark mode (default) — mobile nav overlay */
 .mobile-nav-overlay {
-  background: #050811;
+  background-color: #050811;
+  z-index: 9999;
 }
 
 /* ── Cookie Consent Banner ──────────────────────────────── */

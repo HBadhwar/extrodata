@@ -317,17 +317,20 @@
   transition: transform var(--transition), opacity var(--transition);
 }
 
-/* Mobile Nav Overlay */
+/* Mobile Nav Overlay — Full-screen takeover */
 .mobile-nav-overlay {
   display: none;
   position: fixed;
-  inset: 0;
-  z-index: 150;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: var(--space-6);
-  background: var(--color-bg);
+  background-color: var(--color-bg);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
