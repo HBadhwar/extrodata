@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Us – Get in touch with Extrodata for data consulting, analytics, engineering, and cloud migration services.</title>
+  <title>Contact Us – Let's architect your data future. Get in touch with Extrodata for AI, data engineering, and cloud migration consulting.</title>
   <link rel="stylesheet" href="/assets/css/main.css" media="all">
   <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192">
@@ -18,7 +18,23 @@
 <header class="nav" id="site-header">
   <div class="nav__inner container">
     <a href="/" class="nav__brand">
-      <img src="/assets/images/main-lgoo.png" alt="Extrodata" width="160" height="102" loading="eager">
+      <!-- EXD Logo SVG -->
+      <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+        <!-- Background pill -->
+        <rect width="48" height="32" rx="8" fill="url(#logo-bg)" />
+        <!-- EXD wordmark -->
+        <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#logo-text-grad)">EXD</text>
+        <defs>
+          <linearGradient id="logo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+            <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+          </linearGradient>
+          <linearGradient id="logo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4"/>
+            <stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </a>
 
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
@@ -54,60 +70,103 @@
 
 <main id="main-content">
 
-<section class="page-hero">
-  <div class="container">
-    <h1 class="gradient-text">Contact Us</h1>
-    <p class="lead">Let's discuss how we can help transform your data strategy.</p>
-  </div>
-</section>
+<!-- ==================== CONTACT SPLIT LAYOUT ==================== -->
+<section class="contact-page">
+  <div class="container contact-page__container">
 
-<section class="section">
-  <div class="container">
-    <div class="contact__wrapper">
-      <div class="contact__info">
-        <h2>Get in Touch</h2>
-        <p>We'd love to hear from you. Reach out to us and we'll respond as soon as possible.</p>
+    <!-- LEFT: Contact Info -->
+    <div class="contact-page__info">
+      <span class="badge">Get in Touch</span>
+      <h1 class="contact-page__heading gradient-text">Let's Architect Your Data Future.</h1>
+      <p class="contact-page__subhead">Ready to transform your data strategy? Start the conversation and we'll respond within 24 hours with a tailored engagement plan.</p>
 
-        <div class="contact__details">
-          <div class="contact__item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            <div>
-              <strong>Email</strong>
-              <a href="mailto:info@extrodata.com">info@extrodata.com</a>
-            </div>
+      <div class="contact-page__details">
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </div>
-          <div class="contact__item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <div>
-              <strong>General Enquiries</strong>
-              <a href="mailto:ContactUs@Extrodata.com">ContactUs@Extrodata.com</a>
-            </div>
+          <div class="contact-detail-card__content">
+            <span class="contact-detail-card__label">Email Us</span>
+            <a href="mailto:ContactUs@Extrodata.com" class="contact-detail-card__value">ContactUs@Extrodata.com</a>
           </div>
         </div>
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-detail-card__content">
+            <span class="contact-detail-card__label">Working Hours</span>
+            <span class="contact-detail-card__value">Mon – Fri, 9:00 AM – 6:00 PM EST</span>
+          </div>
+        </div>
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-detail-card__content">
+            <span class="contact-detail-card__label">Headquarters</span>
+            <span class="contact-detail-card__value">Toronto, Ontario, Canada</span>
+          </div>
+        </div>
+
       </div>
 
-      <div class="contact__form-wrapper">
-        <form class="contact__form" action="#" method="POST">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="How can we help?">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary">Send Message</button>
-        </form>
+      <div class="contact-page__trust">
+        <p class="contact-page__trust-text">Trusted by enterprises across North America &amp; Europe</p>
       </div>
     </div>
+
+    <!-- RIGHT: Lead Capture Form -->
+    <div class="contact-page__form-card">
+      <h2 class="contact-page__form-title">Submit an Inquiry</h2>
+      <p class="contact-page__form-subtitle">Fill out the form below and our team will get back to you promptly.</p>
+
+      <form class="contact-page__form" action="#" method="POST">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Jane Smith" autocomplete="name"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" required placeholder="jane@company.com" autocomplete="email"/>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp" autocomplete="organization"/>
+          </div>
+          <div class="form-group">
+            <label for="interest">Project Interest</label>
+            <select id="interest" name="interest" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="data-stack">Data Stack Setup</option>
+              <option value="ai-llm">Custom AI / LLM</option>
+              <option value="cloud-migration">Cloud Migration</option>
+              <option value="predictive-analytics">Predictive Analytics</option>
+              <option value="general-strategy">General Strategy</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell us about your goals, timeline, and any technical constraints…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full btn--glow">Submit Inquiry</button>
+
+        <p class="contact-page__form-note">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. We'll never share your data.</p>
+
+      </form>
+    </div>
+
   </div>
 </section>
 
@@ -118,7 +177,20 @@
     <div class="footer__grid">
 
       <div class="footer__brand">
-        <img src="/assets/images/footer-logo-300.png" alt="Extrodata Logo" width="150" height="96"/>
+        <svg class="footer__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+          <rect width="48" height="32" rx="8" fill="url(#flogo-bg)" />
+          <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#flogo-text-grad)">EXD</text>
+          <defs>
+            <linearGradient id="flogo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+              <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+            </linearGradient>
+            <linearGradient id="flogo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+        </svg>
         <p>At Extrodata, we are committed to transforming your raw data into valuable insights, enabling your business to thrive in the digital age. Our comprehensive suite of data engineering services is designed to streamline your data pipelines, enhance data quality, and empower your organization to make informed decisions.</p>
       </div>
 

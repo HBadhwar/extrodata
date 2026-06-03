@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quality Assurance – Validate data accuracy and reliability through comprehensive testing frameworks from Extrodata.</title>
+  <title>Quality Assurance – exd implements automated data validation, anomaly detection, and pipeline testing to protect data integrity at every stage.</title>
   <link rel="stylesheet" href="/assets/css/main.css" media="all">
   <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192">
@@ -18,7 +18,23 @@
 <header class="nav" id="site-header">
   <div class="nav__inner container">
     <a href="/" class="nav__brand">
-      <img src="/assets/images/main-lgoo.png" alt="Extrodata" width="160" height="102" loading="eager">
+      <!-- EXD Logo SVG -->
+      <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+        <!-- Background pill -->
+        <rect width="48" height="32" rx="8" fill="url(#logo-bg)" />
+        <!-- EXD wordmark -->
+        <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#logo-text-grad)">EXD</text>
+        <defs>
+          <linearGradient id="logo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+            <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+          </linearGradient>
+          <linearGradient id="logo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4"/>
+            <stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </a>
 
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
@@ -57,34 +73,37 @@
 <section class="page-hero">
   <div class="container">
     <h1 class="gradient-text">Quality Assurance</h1>
-    <p class="lead">Validate data accuracy and reliability at every stage.</p>
+    <p class="lead">Automated validation that protects data integrity at every stage.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="service-detail">
-      <p>Data quality is non-negotiable. Our QA services ensure your data pipelines, warehouses, and analytics deliver accurate, reliable results that your business can depend on.</p>
+      <p>Data quality is not a phase — it is a continuous discipline. We implement automated validation, testing, and monitoring across your data pipelines so that issues are detected and resolved before they reach downstream systems or dashboards.</p>
 
-      <h2>What We Offer</h2>
+      <h2>What We Build</h2>
       <ul class="service-features">
-        <li>Data validation and testing frameworks</li>
-        <li>Automated quality checks in pipelines</li>
-        <li>Performance testing and optimization</li>
-        <li>Data reconciliation and auditing</li>
-        <li>Monitoring and alerting systems</li>
+        <li>Automated data validation frameworks integrated into your ETL/ELT pipelines</li>
+        <li>Schema enforcement and anomaly detection that catch corruption at the ingestion point</li>
+        <li>Performance testing for query optimization, pipeline throughput, and warehouse sizing</li>
+        <li>Data reconciliation processes — source-to-destination validation with documented drift analysis</li>
+        <li>Continuous monitoring dashboards and alerting for pipeline health and data freshness</li>
       </ul>
 
+      <h2>Our Approach</h2>
+      <p>We embed quality checks at every layer: ingestion, transformation, and serving. Tests are written alongside pipeline code, executed in CI/CD, and monitored in production. We define clear SLAs for data freshness and accuracy, then build the tooling that enforces them.</p>
+
       <h2>Technologies</h2>
-      <p>We implement QA solutions using Great Expectations, dbt tests, custom Python frameworks, and integrated monitoring tools to catch issues before they impact your business.</p>
+      <p>Great Expectations, dbt tests, custom Python validation frameworks, Apache Airflow sensors, Snowflake monitoring views, Grafana, PagerDuty.</p>
     </div>
   </div>
 </section>
 
 <section class="cta-section">
   <div class="container">
-    <h2>Ensure Data You Can Trust</h2>
-    <a href="/contact/" class="btn btn--primary">Get in Touch</a>
+    <h2>Let's Discuss Your Data Quality Standards</h2>
+    <a href="/contact/" class="btn btn--primary">Start the Conversation</a>
   </div>
 </section>
 
@@ -95,7 +114,20 @@
     <div class="footer__grid">
 
       <div class="footer__brand">
-        <img src="/assets/images/footer-logo-300.png" alt="Extrodata Logo" width="150" height="96"/>
+        <svg class="footer__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+          <rect width="48" height="32" rx="8" fill="url(#flogo-bg)" />
+          <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#flogo-text-grad)">EXD</text>
+          <defs>
+            <linearGradient id="flogo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+              <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+            </linearGradient>
+            <linearGradient id="flogo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+        </svg>
         <p>At Extrodata, we are committed to transforming your raw data into valuable insights, enabling your business to thrive in the digital age. Our comprehensive suite of data engineering services is designed to streamline your data pipelines, enhance data quality, and empower your organization to make informed decisions.</p>
       </div>
 

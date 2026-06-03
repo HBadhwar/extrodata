@@ -1,6 +1,10 @@
 name: "Extrodata AI & Data Consulting"
 description: "Data-Driven AI Transformation"
-# Exclude dev files from being compiled into the final site
+# Allow future-dated posts during development
+future: true
+# Permalink structure for blog posts
+permalink: /blog/:year/:month/:day/:title.html
+# Exclude dev files and old static blog pages from being compiled into the final site
 exclude:
   - .devcontainer/
   - .opencode/
@@ -8,3 +12,8 @@ exclude:
   - .env
   - .jekyll-cache/
   - _site/
+  - blog/cybersecurity-lms/
+  - blog/execute-immediate-snowsql/
+  - blog/near-real-time-data-ingestion/
+  - blog/what-is-data-cloud/
+  - blog/category/

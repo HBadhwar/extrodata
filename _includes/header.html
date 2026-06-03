@@ -18,7 +18,23 @@
 <header class="nav" id="site-header">
   <div class="nav__inner container">
     <a href="/" class="nav__brand">
-      <img src="/assets/images/main-lgoo.png" alt="Extrodata" width="160" height="102" loading="eager">
+      <!-- EXD Logo SVG -->
+      <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+        <!-- Background pill -->
+        <rect width="48" height="32" rx="8" fill="url(#logo-bg)" />
+        <!-- EXD wordmark -->
+        <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#logo-text-grad)">EXD</text>
+        <defs>
+          <linearGradient id="logo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+            <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+          </linearGradient>
+          <linearGradient id="logo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4"/>
+            <stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </a>
 
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">

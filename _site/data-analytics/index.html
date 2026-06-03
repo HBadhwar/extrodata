@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data Analytics – Transform raw data into actionable insights with advanced analytics and visualization from Extrodata.</title>
+  <title>Data Analytics – exd designs analytics platforms that turn operational data into reliable, actionable intelligence for enterprise decision-making.</title>
   <link rel="stylesheet" href="/assets/css/main.css" media="all">
   <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192">
@@ -18,7 +18,23 @@
 <header class="nav" id="site-header">
   <div class="nav__inner container">
     <a href="/" class="nav__brand">
-      <img src="/assets/images/main-lgoo.png" alt="Extrodata" width="160" height="102" loading="eager">
+      <!-- EXD Logo SVG -->
+      <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+        <!-- Background pill -->
+        <rect width="48" height="32" rx="8" fill="url(#logo-bg)" />
+        <!-- EXD wordmark -->
+        <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#logo-text-grad)">EXD</text>
+        <defs>
+          <linearGradient id="logo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+            <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+          </linearGradient>
+          <linearGradient id="logo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4"/>
+            <stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </a>
 
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
@@ -57,34 +73,37 @@
 <section class="page-hero">
   <div class="container">
     <h1 class="gradient-text">Data Analytics</h1>
-    <p class="lead">Transform raw data into actionable business insights.</p>
+    <p class="lead">Analytics platforms built for clarity and precision.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="service-detail">
-      <p>We help organizations unlock the full potential of their data through advanced analytics solutions. From descriptive analytics to predictive modeling, our team delivers insights that drive business growth.</p>
+      <p>We design analytics platforms that give organizations operational clarity. Our approach starts with understanding your business questions, then we build the models, dashboards, and self-serve tools that answer them reliably.</p>
 
-      <h2>What We Offer</h2>
+      <h2>What We Build</h2>
       <ul class="service-features">
-        <li>Business intelligence dashboards and reporting</li>
-        <li>Predictive and prescriptive analytics</li>
-        <li>Data visualization and storytelling</li>
-        <li>Self-service analytics platforms</li>
-        <li>Advanced statistical modeling</li>
+        <li>Executive dashboards and operational reporting built on Snowflake or Databricks</li>
+        <li>Predictive models for demand forecasting, churn analysis, and revenue optimization</li>
+        <li>Self-serve analytics environments that empower business teams without engineering dependency</li>
+        <li>Data visualization with Tableau, Power BI, or Looker — chosen to fit your stack</li>
+        <li>Statistical modeling and A/B testing frameworks for product and marketing decisions</li>
       </ul>
 
+      <h2>Our Approach</h2>
+      <p>We do not ship dashboards and walk away. We define the metrics that matter, build the models that calculate them correctly, and train your team to maintain and extend them. Every analytics deliverable includes documentation, data lineage, and a handover plan.</p>
+
       <h2>Technologies</h2>
-      <p>We work with leading analytics platforms including Snowflake, Azure Synapse, Tableau, Power BI, and dbt to deliver solutions that scale with your business.</p>
+      <p>Snowflake, Databricks, dbt, Tableau, Power BI, Looker, Python (Pandas, scikit-learn), R, Azure Synapse, Apache Spark.</p>
     </div>
   </div>
 </section>
 
 <section class="cta-section">
   <div class="container">
-    <h2>Ready to Unlock Your Data?</h2>
-    <a href="/contact/" class="btn btn--primary">Get in Touch</a>
+    <h2>Let's Discuss Your Analytics Requirements</h2>
+    <a href="/contact/" class="btn btn--primary">Start the Conversation</a>
   </div>
 </section>
 
@@ -95,7 +114,20 @@
     <div class="footer__grid">
 
       <div class="footer__brand">
-        <img src="/assets/images/footer-logo-300.png" alt="Extrodata Logo" width="150" height="96"/>
+        <svg class="footer__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+          <rect width="48" height="32" rx="8" fill="url(#flogo-bg)" />
+          <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#flogo-text-grad)">EXD</text>
+          <defs>
+            <linearGradient id="flogo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+              <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+            </linearGradient>
+            <linearGradient id="flogo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+        </svg>
         <p>At Extrodata, we are committed to transforming your raw data into valuable insights, enabling your business to thrive in the digital age. Our comprehensive suite of data engineering services is designed to streamline your data pipelines, enhance data quality, and empower your organization to make informed decisions.</p>
       </div>
 

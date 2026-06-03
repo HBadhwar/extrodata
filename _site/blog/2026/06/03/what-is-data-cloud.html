@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cybersecurity in LMS Programs – Best practices for securing learning management systems with modern cybersecurity measures.</title>
+  <title>What is Data Cloud?</title>
   <link rel="stylesheet" href="/assets/css/main.css" media="all">
   <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192">
@@ -18,7 +18,23 @@
 <header class="nav" id="site-header">
   <div class="nav__inner container">
     <a href="/" class="nav__brand">
-      <img src="/assets/images/main-lgoo.png" alt="Extrodata" width="160" height="102" loading="eager">
+      <!-- EXD Logo SVG -->
+      <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+        <!-- Background pill -->
+        <rect width="48" height="32" rx="8" fill="url(#logo-bg)" />
+        <!-- EXD wordmark -->
+        <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#logo-text-grad)">EXD</text>
+        <defs>
+          <linearGradient id="logo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+            <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+          </linearGradient>
+          <linearGradient id="logo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4"/>
+            <stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </a>
 
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
@@ -54,41 +70,53 @@
 
 <main id="main-content">
 
-<section class="page-hero">
+<article class="post-article">
+  <header class="post-header">
+    <div class="container">
+      
+        
+          <span class="post-tag">Snowflake</span>
+        
+      
+      <h1 class="post-title">What is Data Cloud?</h1>
+      <time class="post-date" datetime="2026-06-03T00:00:00+00:00">
+        June 03, 2026
+      </time>
+      
+        <p class="post-excerpt">Understanding the architecture that unifies data warehousing, lakes, and analytics into a single platform.</p>
+      
+    </div>
+  </header>
+
   <div class="container">
-    <span class="hero__tag">Azure</span>
-    <h1 class="gradient-text">Implementing Cybersecurity Measures in Your LMS Program</h1>
-    <p class="lead">Best practices for securing learning management systems with modern cybersecurity measures.</p>
+    <div class="post-content">
+      <p>The term “Data Cloud” has become central to modern data architecture. It represents a shift away from fragmented systems toward a unified platform that handles structured and unstructured data at scale.</p>
+
+<h2 id="what-is-a-data-cloud">What is a Data Cloud?</h2>
+
+<p>A Data Cloud is a cloud-native platform that combines data warehousing, data lakes, and advanced analytics into a single service. It eliminates the architectural friction of maintaining separate systems for different data types and workloads.</p>
+
+<h2 id="key-capabilities">Key Capabilities</h2>
+
+<ul>
+  <li><strong>Unified Platform:</strong> One system for structured, semi-structured, and unstructured data</li>
+  <li><strong>Elastic Scaling:</strong> Independent compute and storage that scale to match workload demands</li>
+  <li><strong>Secure Data Sharing:</strong> Share live data across organizations without copying or moving it</li>
+  <li><strong>Built-in Governance:</strong> Native tools for data quality, access control, and compliance</li>
+  <li><strong>Cost Efficiency:</strong> Consumption-based pricing that aligns cost to actual usage</li>
+</ul>
+
+<h2 id="snowflake-and-the-data-cloud">Snowflake and the Data Cloud</h2>
+
+<p>Snowflake pioneered the Data Cloud concept with its separation of compute from storage. This architecture enables independent scaling, eliminates resource contention, and optimizes cost. Snowflake’s Data Sharing capabilities allow organizations to share live data in real-time without the overhead of traditional ETL processes.</p>
+
+<h2 id="evaluating-a-migration">Evaluating a Migration</h2>
+
+<p>Migrating to a Data Cloud platform requires assessing your current architecture, identifying priority use cases, and planning a phased transition. The organizations that see the strongest ROI start with their highest-value workloads and expand from there.</p>
+
+    </div>
   </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <article class="service-detail">
-      <p>Learning Management Systems (LMS) contain sensitive student and employee data. Implementing robust cybersecurity measures is essential to protect this information from threats.</p>
-
-      <h2>Why LMS Security Matters</h2>
-      <p>LMS platforms store personal identifiable information (PII), assessment data, and sometimes payment information. A breach can have serious consequences for both the organization and its users.</p>
-
-      <h2>Key Security Measures</h2>
-      <ul class="service-features">
-        <li><strong>Multi-Factor Authentication (MFA):</strong> Require additional verification beyond passwords</li>
-        <li><strong>Role-Based Access Control:</strong> Limit access based on user roles and responsibilities</li>
-        <li><strong>Encryption:</strong> Protect data at rest and in transit with strong encryption</li>
-        <li><strong>Regular Audits:</strong> Conduct security assessments and penetration testing</li>
-        <li><strong>Incident Response Plan:</strong> Prepare for potential breaches with a clear response strategy</li>
-      </ul>
-
-      <h2>Azure Security Integration</h2>
-      <p>Azure provides a comprehensive suite of security tools that can be integrated with your LMS, including Azure Active Directory for identity management, Azure Security Center for threat detection, and Azure Key Vault for secret management.</p>
-
-      <h2>Compliance Considerations</h2>
-      <p>Depending on your region and industry, your LMS may need to comply with regulations like FERPA, GDPR, or HIPAA. Understanding these requirements is crucial for implementing appropriate security controls.</p>
-
-      <a href="/contact/" class="btn btn--primary" style="margin-top: 2rem; display: inline-block;">Secure Your LMS Today</a>
-    </article>
-  </div>
-</section>
+</article>
 
 </main><!-- #main-content -->
 
@@ -97,7 +125,20 @@
     <div class="footer__grid">
 
       <div class="footer__brand">
-        <img src="/assets/images/footer-logo-300.png" alt="Extrodata Logo" width="150" height="96"/>
+        <svg class="footer__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+          <rect width="48" height="32" rx="8" fill="url(#flogo-bg)" />
+          <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#flogo-text-grad)">EXD</text>
+          <defs>
+            <linearGradient id="flogo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+              <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+            </linearGradient>
+            <linearGradient id="flogo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+        </svg>
         <p>At Extrodata, we are committed to transforming your raw data into valuable insights, enabling your business to thrive in the digital age. Our comprehensive suite of data engineering services is designed to streamline your data pipelines, enhance data quality, and empower your organization to make informed decisions.</p>
       </div>
 

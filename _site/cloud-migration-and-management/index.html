@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cloud Migration and Management – Seamlessly migrate your data infrastructure to the cloud with minimal downtime from Extrodata.</title>
+  <title>Cloud Migration and Management – exd plans and executes cloud data migrations to AWS, Azure, or GCP with zero disruption to your operations.</title>
   <link rel="stylesheet" href="/assets/css/main.css" media="all">
   <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
   <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192">
@@ -18,7 +18,23 @@
 <header class="nav" id="site-header">
   <div class="nav__inner container">
     <a href="/" class="nav__brand">
-      <img src="/assets/images/main-lgoo.png" alt="Extrodata" width="160" height="102" loading="eager">
+      <!-- EXD Logo SVG -->
+      <svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+        <!-- Background pill -->
+        <rect width="48" height="32" rx="8" fill="url(#logo-bg)" />
+        <!-- EXD wordmark -->
+        <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#logo-text-grad)">EXD</text>
+        <defs>
+          <linearGradient id="logo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+            <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+          </linearGradient>
+          <linearGradient id="logo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#06b6d4"/>
+            <stop offset="1" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </a>
 
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
@@ -57,34 +73,37 @@
 <section class="page-hero">
   <div class="container">
     <h1 class="gradient-text">Cloud Migration &amp; Management</h1>
-    <p class="lead">Seamlessly migrate and manage your data in the cloud.</p>
+    <p class="lead">Precision-migrated infrastructure. Zero operational disruption.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="service-detail">
-      <p>Moving to the cloud doesn't have to be disruptive. Our cloud migration team plans and executes seamless transitions from on-premises systems to modern cloud platforms, ensuring minimal downtime and maximum data integrity.</p>
+      <p>We plan and execute cloud transitions with the same rigor we apply to data engineering. A migration is not a lift-and-shift — it is an opportunity to re-architect your infrastructure for reliability, performance, and cost efficiency.</p>
 
-      <h2>What We Offer</h2>
+      <h2>What We Deliver</h2>
       <ul class="service-features">
-        <li>Cloud assessment and migration planning</li>
-        <li>Data migration and synchronization</li>
-        <li>Cloud infrastructure setup and optimization</li>
-        <li>Ongoing cloud management and support</li>
-        <li>Cost optimization and monitoring</li>
+        <li>Comprehensive assessment of existing infrastructure, data volumes, and dependency mapping</li>
+        <li>Migration runbooks with phased execution, validation checkpoints, and documented rollback procedures</li>
+        <li>Data synchronization and cutover executed during maintenance windows with zero business downtime</li>
+        <li>Post-migration optimization — right-sizing compute, implementing auto-scaling, and establishing cost guardrails</li>
+        <li>Ongoing cloud management, monitoring, and performance tuning</li>
       </ul>
 
+      <h2>Our Approach</h2>
+      <p>We run the migration in parallel with your existing systems. Data is validated at every stage — row counts, checksums, query results — before any cutover happens. Your team is trained on the new environment before go-live. We do not consider a migration complete until your operations team is confident running it independently.</p>
+
       <h2>Technologies</h2>
-      <p>We specialize in Azure, AWS, and Snowflake cloud platforms, providing end-to-end migration services and ongoing management to keep your cloud infrastructure running smoothly.</p>
+      <p>AWS (S3, Redshift, Glue, Lambda), Azure (Data Lake Storage, Synapse, Data Factory, Databricks), GCP (BigQuery, Cloud Storage, Dataflow), Snowflake, Terraform.</p>
     </div>
   </div>
 </section>
 
 <section class="cta-section">
   <div class="container">
-    <h2>Ready to Move to the Cloud?</h2>
-    <a href="/contact/" class="btn btn--primary">Get in Touch</a>
+    <h2>Let's Discuss Your Migration Plan</h2>
+    <a href="/contact/" class="btn btn--primary">Start the Conversation</a>
   </div>
 </section>
 
@@ -95,7 +114,20 @@
     <div class="footer__grid">
 
       <div class="footer__brand">
-        <img src="/assets/images/footer-logo-300.png" alt="Extrodata Logo" width="150" height="96"/>
+        <svg class="footer__logo" xmlns="http://www.w3.org/2000/svg" width="48" height="32" viewBox="0 0 48 32" fill="none" aria-label="Extrodata">
+          <rect width="48" height="32" rx="8" fill="url(#flogo-bg)" />
+          <text x="24" y="22" text-anchor="middle" font-family="'Inter', 'SF Pro Display', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="url(#flogo-text-grad)">EXD</text>
+          <defs>
+            <linearGradient id="flogo-bg" x1="0" y1="0" x2="48" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4" stop-opacity="0.15"/>
+              <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+            </linearGradient>
+            <linearGradient id="flogo-text-grad" x1="8" y1="6" x2="40" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+        </svg>
         <p>At Extrodata, we are committed to transforming your raw data into valuable insights, enabling your business to thrive in the digital age. Our comprehensive suite of data engineering services is designed to streamline your data pipelines, enhance data quality, and empower your organization to make informed decisions.</p>
       </div>
 
