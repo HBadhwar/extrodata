@@ -30,7 +30,6 @@ jobs:
         with:
           ruby-version: "3.3"
           bundler-cache: true
-          working-directory: ${{ github.workspace }}
 
       - name: Setup Pages
         id: pages
@@ -38,14 +37,13 @@ jobs:
 
       - name: Build with Jekyll
         env:
-          PAGES_ARTIFACT_PATH: ${{ steps.pages.outputs.artifact-path }}
-        run: |
-          bundle exec jekyll build \
-            --baseurl "${{ steps.pages.outputs.base_path }}" \
-            --destination "$PAGES_ARTIFACT_PATH"
+          JEKYLL_BASEPATH: ${{ steps.pages.outputs.base_path }}
+        run: bundle exec jekyll build --baseurl "$JEKYLL_BASEPATH"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
 
   deploy:
     environment:
