@@ -2,7 +2,7 @@
 _site/
 
 # Ruby / Bundler
-Gemfile.lock
+# (Gemfile.lock is tracked for reproducible GitHub Pages builds)
 /vendor/
 
 # Editor / IDE
