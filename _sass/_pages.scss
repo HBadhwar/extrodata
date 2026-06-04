@@ -1590,15 +1590,18 @@
 
 /* ── Engagement Steps (Presales Process) ─────────────────── */
 
-.engagement-steps {
+/* ── Engagement Flow (Horizontal on desktop, vertical on mobile) ─── */
+
+.engagement-flow {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
+  align-items: stretch;
+  gap: var(--space-4);
 }
 
 .engagement-step {
+  flex: 1;
   display: flex;
-  gap: var(--space-6);
+  flex-direction: column;
   padding: var(--space-6);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -1607,7 +1610,7 @@
 
   &:hover {
     border-color: var(--color-primary);
-    transform: translateX(4px);
+    transform: translateY(-2px);
   }
 }
 
@@ -1617,12 +1620,13 @@
   font-weight: 700;
   color: var(--color-primary);
   line-height: 1;
-  flex-shrink: 0;
-  width: 48px;
+  margin-bottom: var(--space-4);
 }
 
 .engagement-step__content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .engagement-step__title {
@@ -1634,13 +1638,41 @@
 }
 
 .engagement-step__body {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
 }
 
+/* Arrow connectors between steps */
+.engagement-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-primary);
+  opacity: 0.6;
+}
+
 /* ── Responsive adjustments ──────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .engagement-flow {
+    flex-wrap: wrap;
+  }
+
+  .engagement-step {
+    flex: calc(50% - var(--space-2));
+    min-width: calc(50% - var(--space-2));
+  }
+
+  .engagement-arrow {
+    width: 100%;
+    justify-content: center;
+    transform: rotate(90deg);
+    margin: var(--space-2) 0;
+  }
+}
 
 @media (max-width: 768px) {
   .certifications-grid {
@@ -1655,13 +1687,18 @@
     font-size: var(--text-base);
   }
 
-  .engagement-step {
+  .engagement-flow {
     flex-direction: column;
-    gap: var(--space-3);
   }
 
-  .engagement-step__number {
-    width: auto;
+  .engagement-step {
+    flex: 1;
+    min-width: 100%;
+  }
+
+  .engagement-arrow {
+    transform: rotate(90deg);
+    margin: var(--space-2) 0;
   }
 }
 
