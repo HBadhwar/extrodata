@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "Data Governance Best Practices for 2026"
+date: 2026-06-05
+author: "Extrodata Team"
+category: "Data Strategy"
 description: "A practical guide to building data governance frameworks that actually work — covering data quality, lineage, and compliance."
 featured_image: "/assets/images/data-governance-banner.jpg"
-categories: [data-governance]
 ---
 
 ## Why Data Governance Matters More Than Ever

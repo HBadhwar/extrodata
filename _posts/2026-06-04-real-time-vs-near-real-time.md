@@ -3,7 +3,9 @@ layout: post
 title: "Real-Time vs Near-Real-Time: Choosing the Right Streaming Pattern"
 date: 2026-06-04
 author: "Extrodata Team"
+category: "Data Engineering"
 description: "A pragmatic architectural guide to comparing streaming patterns: Apache Kafka, Azure Event Hubs, and Snowflake Snowpipe."
+featured_image: "/assets/images/data-eng-banner.jpg"
 ---
 
 When enterprise stakeholders ask for "real-time data," they rarely mean sub-second latency. Usually, what they actually need is data that is fresh enough to make an operational decision—which often means a 5-to-15 minute delay is perfectly acceptable.

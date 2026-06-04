@@ -31,6 +31,7 @@
 
         <li><a href="{{ '/industries/' | relative_url }}" class="nav-link{% if page.url == '/industries/' %} active{% endif %}">Industries</a></li>
         <li><a href="{{ '/case-studies/' | relative_url }}" class="nav-link{% if page.url == '/case-studies/' %} active{% endif %}">Case Studies</a></li>
+        <li><a href="{{ '/insights/' | relative_url }}" class="nav-link{% if page.url == '/insights/' or page.url contains '/blog/' %} active{% endif %}">Insights</a></li>
         <li><a href="{{ '/about/' | relative_url }}" class="nav-link{% if page.url == '/about/' %} active{% endif %}">About</a></li>
         <li><a href="{{ '/contact/' | relative_url }}" class="nav-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a></li>
       </ul>
@@ -58,6 +59,7 @@
       <li class="mobile-nav-sub"><a href="{{ '/cloud-data-platforms/' | relative_url }}" class="mobile-nav-link">Cloud Data Platforms</a></li>
       <li><a href="{{ '/industries/' | relative_url }}" class="mobile-nav-link{% if page.url == '/industries/' %} active{% endif %}">Industries</a></li>
       <li><a href="{{ '/case-studies/' | relative_url }}" class="mobile-nav-link{% if page.url == '/case-studies/' %} active{% endif %}">Case Studies</a></li>
+      <li><a href="{{ '/insights/' | relative_url }}" class="mobile-nav-link{% if page.url == '/insights/' or page.url contains '/blog/' %} active{% endif %}">Insights</a></li>
       <li><a href="{{ '/about/' | relative_url }}" class="mobile-nav-link{% if page.url == '/about/' %} active{% endif %}">About</a></li>
       <li><a href="{{ '/contact/' | relative_url }}" class="mobile-nav-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a></li>
     </ul>

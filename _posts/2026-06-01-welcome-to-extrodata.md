@@ -2,8 +2,11 @@
 layout: post
 title: "Welcome to Extrodata"
 date: 2026-06-01
+author: "Extrodata Team"
+category: "Company"
 excerpt: "We're launching EXD with a clear mission: deliver senior-only AI and Data consulting that produces measurable outcomes, not slide decks."
 reading_time: 4
+featured_image: "/assets/images/cloud-banner.jpg"
 ---
 
 ## Why EXD Exists

@@ -3,7 +3,9 @@ layout: post
 title: "Data Mesh in Practice: What Account-Per-Domain Actually Means at Scale"
 date: 2026-06-04
 author: "Extrodata Team"
+category: "Architecture"
 description: "A pragmatic look at implementing an account-per-domain Data Mesh architecture for global enterprises, moving past the hype into production reality."
+featured_image: "/assets/images/data-cloud.jpg"
 ---
 
 The concept of a Data Mesh is heavily marketed, but highly misunderstood. For the past few years, enterprise data teams have been sold on the promise of decentralized, domain-oriented data ownership. In theory, it eliminates the bottleneck of a centralized data engineering team. In practice, without strict architectural boundaries, a Data Mesh quickly devolves into a fragmented data swamp.

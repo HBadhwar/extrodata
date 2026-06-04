@@ -3,7 +3,9 @@ layout: post
 title: "Migrating from SSAS to a Modern Semantic Layer: A Practical Checklist"
 date: 2026-06-04
 author: "Extrodata Team"
+category: "Analytics & BI"
 description: "A technical guide for enterprises looking to migrate off legacy SSAS cubes to modern, scalable semantic layers."
+featured_image: "/assets/images/data-analytics-banner.jpg"
 ---
 
 Thousands of enterprises are currently running business-critical reporting on legacy SQL Server Analysis Services (SSAS) cubes. Whether multidimensional or tabular, these on-premises (or lift-and-shift cloud) cubes were brilliant for their time. Today, however, they represent a significant bottleneck.

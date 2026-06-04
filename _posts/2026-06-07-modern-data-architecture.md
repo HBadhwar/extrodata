@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "Modern Data Architecture: From Data Warehouse to Data Cloud"
+date: 2026-06-07
+author: "Extrodata Team"
+category: "Architecture"
 description: "How leading organisations are evolving their data architecture from traditional warehouses to cloud-native platforms."
 featured_image: "/assets/images/azure-1.jpg"
-categories: [data-architecture]
 ---
 
 ## The Evolution of Data Architecture

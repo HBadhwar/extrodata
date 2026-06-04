@@ -2,13 +2,51 @@
 layout: default
 ---
 
+{% if page.featured_image %}
+<article class="post-article--hero">
+  <div class="post-hero-image reveal">
+    <img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}" loading="eager">
+    <div class="post-hero-image__overlay"></div>
+    <div class="post-hero-image__content container">
+      {% if page.category %}
+      <span class="badge badge--sm">{{ page.category }}</span>
+      {% endif %}
+      <h1>{{ page.title }}</h1>
+      <div class="post-hero-image__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        <span>&middot;</span>
+        {% if page.author %}
+        <span>{{ page.author }}</span>
+        <span>&middot;</span>
+        {% endif %}
+        <span>{% assign words = content | number_of_words %}
+          {% if words <= 200 %}1 min read
+          {% elsif words <= 500 %}~{{ words | divided_by: 200 | plus: 1 }} min read
+          {% else %}~{{ words | divided_by: 200 }} min read
+          {% endif %}
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="post-article__content container reveal">
+    {{ content }}
+  </div>
+</article>
+{% else %}
 <article class="post-article container">
   <header class="reveal">
+    {% if page.category %}
+    <span class="badge badge--sm" style="margin-bottom:var(--space-4);display:inline-block;">{{ page.category }}</span>
+    {% endif %}
     <h1>{{ page.title }}</h1>
     <div class="post-article__meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
       <span>&middot;</span>
-      <span>{% assign words = page.content | number_of_words %}
+      {% if page.author %}
+      <span>{{ page.author }}</span>
+      <span>&middot;</span>
+      {% endif %}
+      <span>{% assign words = content | number_of_words %}
         {% if words <= 200 %}1 min read
         {% elsif words <= 500 %}~{{ words | divided_by: 200 | plus: 1 }} min read
         {% else %}~{{ words | divided_by: 200 }} min read
@@ -16,8 +54,8 @@ layout: default
       </span>
     </div>
   </header>
-
   <div class="post-article__content reveal">
     {{ content }}
   </div>
 </article>
+{% endif %}

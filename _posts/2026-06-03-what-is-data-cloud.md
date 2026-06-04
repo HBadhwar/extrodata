@@ -1,8 +1,11 @@
 ---
 layout: post
-title: What is Data Cloud?
-categories: [Snowflake]
+title: "What is Data Cloud?"
+date: 2026-06-03
+author: "Extrodata Team"
+category: "Cloud Platforms"
 excerpt: Understanding the architecture that unifies data warehousing, lakes, and analytics into a single platform.
+featured_image: "/assets/images/cloud-banner.jpg"
 ---
 
 The term "Data Cloud" has become central to modern data architecture. It represents a shift away from fragmented systems toward a unified platform that handles structured and unstructured data at scale.

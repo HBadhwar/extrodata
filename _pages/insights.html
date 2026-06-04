@@ -1,30 +1,162 @@
 ---
 layout: page
-title: "AI & Data Insights Blog"
+title: "AI & Data Insights"
 hero_title: "Insights & Thinking"
 hero_subtitle: "Practical perspectives on AI, data strategy, and enterprise transformation from the EXD team."
-description: "Read articles, case studies, and thought leadership from Extrodata's AI and Data experts."
+description: "Read articles, thought leadership, and technical deep-dives from Extrodata's AI and Data experts."
 permalink: /insights/
 ---
 
 <!-- ═══════════════════════════════════════════════════════
-     1. POSTS GRID — Jekyll collection loop
+     1. CATEGORY CARDS GRID — Like services bento layout
+     ═══════════════════════════════════════════════════════ -->
+<section class="section" style="padding-bottom: var(--space-6);">
+  <div class="container">
+    <h2 class="section-heading reveal">Explore by Topic</h2>
+
+    <div class="categories-grid">
+
+      <!-- Architecture -->
+      <a href="#posts-grid" class="category-card reveal-stagger" data-stagger="0" data-category="architecture">
+        <div class="category-card__bg" style="background-image: url('{{ '/assets/images/data-cloud.jpg' | relative_url }}');"></div>
+        <div class="category-card__overlay"></div>
+        <div class="category-card__content">
+          <div class="category-card__icon-wrap">
+            <i data-lucide="network" style="width:24px;height:24px;"></i>
+          </div>
+          <h3 class="category-card__title">Architecture</h3>
+          <p class="category-card__desc">Data mesh, lakehouse patterns, and enterprise-scale data platform design.</p>
+          <span class="category-card__count">{% assign count = 0 %}{% for post in site.posts %}{% if post.category == 'Architecture' %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}{{ count }} article{% if count > 1 %}s{% endif %}</span>
+        </div>
+      </a>
+
+      <!-- Analytics & BI -->
+      <a href="#posts-grid" class="category-card reveal-stagger" data-stagger="1" data-category="analytics-bi">
+        <div class="category-card__bg" style="background-image: url('{{ '/assets/images/data-analytics-banner.jpg' | relative_url }}');"></div>
+        <div class="category-card__overlay"></div>
+        <div class="category-card__content">
+          <div class="category-card__icon-wrap">
+            <i data-lucide="bar-chart-3" style="width:24px;height:24px;"></i>
+          </div>
+          <h3 class="category-card__title">Analytics & BI</h3>
+          <p class="category-card__desc">Semantic layers, dashboard design, and modern BI migration strategies.</p>
+          <span class="category-card__count">{% assign count = 0 %}{% for post in site.posts %}{% if post.category == 'Analytics & BI' %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}{{ count }} article{% if count > 1 %}s{% endif %}</span>
+        </div>
+      </a>
+
+      <!-- Data Engineering -->
+      <a href="#posts-grid" class="category-card reveal-stagger" data-stagger="2" data-category="data-engineering">
+        <div class="category-card__bg" style="background-image: url('{{ '/assets/images/data-eng-banner.jpg' | relative_url }}');"></div>
+        <div class="category-card__overlay"></div>
+        <div class="category-card__content">
+          <div class="category-card__icon-wrap">
+            <i data-lucide="git-branch" style="width:24px;height:24px;"></i>
+          </div>
+          <h3 class="category-card__title">Data Engineering</h3>
+          <p class="category-card__desc">Pipeline architecture, streaming patterns, and ELT best practices.</p>
+          <span class="category-card__count">{% assign count = 0 %}{% for post in site.posts %}{% if post.category == 'Data Engineering' %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}{{ count }} article{% if count > 1 %}s{% endif %}</span>
+        </div>
+      </a>
+
+      <!-- Data Strategy -->
+      <a href="#posts-grid" class="category-card reveal-stagger" data-stagger="3" data-category="data-strategy">
+        <div class="category-card__bg" style="background-image: url('{{ '/assets/images/data-governance-banner.jpg' | relative_url }}');"></div>
+        <div class="category-card__overlay"></div>
+        <div class="category-card__content">
+          <div class="category-card__icon-wrap">
+            <i data-lucide="shield-check" style="width:24px;height:24px;"></i>
+          </div>
+          <h3 class="category-card__title">Data Strategy</h3>
+          <p class="category-card__desc">Governance frameworks, compliance, and data quality programmes.</p>
+          <span class="category-card__count">{% assign count = 0 %}{% for post in site.posts %}{% if post.category == 'Data Strategy' %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}{{ count }} article{% if count > 1 %}s{% endif %}</span>
+        </div>
+      </a>
+
+      <!-- Cloud Platforms -->
+      <a href="#posts-grid" class="category-card reveal-stagger" data-stagger="4" data-category="cloud-platforms">
+        <div class="category-card__bg" style="background-image: url('{{ '/assets/images/cloud-banner.jpg' | relative_url }}');"></div>
+        <div class="category-card__overlay"></div>
+        <div class="category-card__content">
+          <div class="category-card__icon-wrap">
+            <i data-lucide="cloud" style="width:24px;height:24px;"></i>
+          </div>
+          <h3 class="category-card__title">Cloud Platforms</h3>
+          <p class="category-card__desc">Snowflake, Databricks, Azure — platform selection and migration paths.</p>
+          <span class="category-card__count">{% assign count = 0 %}{% for post in site.posts %}{% if post.category == 'Cloud Platforms' %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}{{ count }} article{% if count > 1 %}s{% endif %}</span>
+        </div>
+      </a>
+
+      <!-- Company -->
+      <a href="#posts-grid" class="category-card reveal-stagger" data-stagger="5" data-category="company">
+        <div class="category-card__bg" style="background-image: url('{{ '/assets/images/mask-group.jpg' | relative_url }}');"></div>
+        <div class="category-card__overlay"></div>
+        <div class="category-card__content">
+          <div class="category-card__icon-wrap">
+            <i data-lucide="building-2" style="width:24px;height:24px;"></i>
+          </div>
+          <h3 class="category-card__title">Company</h3>
+          <p class="category-card__desc">Our mission, values, and perspective on the AI consulting landscape.</p>
+          <span class="category-card__count">{% assign count = 0 %}{% for post in site.posts %}{% if post.category == 'Company' %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}{{ count }} article{% if count > 1 %}s{% endif %}</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     2. FILTER PILLS — Compact row for quick filtering
+     ═══════════════════════════════════════════════════════ -->
+<section class="section--sm" style="padding-bottom: 0;">
+  <div class="container">
+    <div class="insights-categories reveal">
+      <button class="category-pill active" data-category="all">All Posts</button>
+      {% assign unique_cats = "" | split: "" %}
+      {% for post in site.posts %}
+        {% if post.category and post.category != '' %}
+          {% assign found = false %}
+          {% for existing in unique_cats %}
+            {% if existing == post.category %}
+              {% assign found = true %}
+            {% endif %}
+          {% endfor %}
+          {% unless found %}
+            {% assign unique_cats = unique_cats | push: post.category %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+      {% for cat in unique_cats %}
+        <button class="category-pill" data-category="{{ cat | downcase | slugify }}">{{ cat }}</button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     3. POSTS GRID — Jekyll collection loop
      ═══════════════════════════════════════════════════════ -->
 <section class="section">
   <div class="container">
-    <div class="posts-grid">
+    <div class="posts-grid" id="posts-grid">
 
       {% for post in site.posts %}
-      <article class="post-card reveal">
+      <article class="post-card reveal" data-category="{{ post.category | downcase | slugify }}">
         {% if post.featured_image %}
-        <div class="post-card__image">
-          <img src="{{ post.featured_image }}" alt="{{ post.title }}" loading="lazy">
-        </div>
+        <a href="{{ post.url | relative_url }}" class="post-card__image-link">
+          <div class="post-card__image">
+            <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+          </div>
+        </a>
         {% endif %}
-        <p class="post-card__meta">{{ post.date | date: "%B %d, %Y" }} · {{ post.reading_time | at_least: 1 }} min read</p>
-        <h3 class="post-card__title"><a href="{{ post.url }}" style="color:inherit;text-decoration:none;">{{ post.title }}</a></h3>
-        <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-        <a href="{{ post.url }}" class="card__link">Read more <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+        <div class="post-card__header">
+          {% if post.category %}
+          <span class="badge badge--sm post-card__category">{{ post.category }}</span>
+          {% endif %}
+          <p class="post-card__meta">{{ post.date | date: "%B %d, %Y" }} · {{ post.reading_time | default: 3 }} min read</p>
+        </div>
+        <h3 class="post-card__title"><a href="{{ post.url | relative_url }}" style="color:inherit;text-decoration:none;">{{ post.title }}</a></h3>
+        <p class="post-card__excerpt">{{ post.excerpt | default: post.description | strip_html | truncatewords: 30 }}</p>
+        <a href="{{ post.url | relative_url }}" class="card__link">Read article <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
       </article>
       {% endfor %}
 
@@ -33,7 +165,7 @@ permalink: /insights/
 </section>
 
 <!-- ═══════════════════════════════════════════════════════
-     2. NEWSLETTER CTA (future-proof placeholder)
+     4. NEWSLETTER CTA (future-proof placeholder)
      ═══════════════════════════════════════════════════════ -->
 <section class="section--sm">
   <div class="container">
@@ -44,3 +176,58 @@ permalink: /insights/
     </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════
+     5. CATEGORY FILTER JS — Pills + Cards both filter posts
+     ═══════════════════════════════════════════════════════ -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const pills = document.querySelectorAll('.category-pill');
+  const cards = document.querySelectorAll('.category-card[data-category]');
+  const postCards = document.querySelectorAll('.post-card[data-category]');
+
+  function filterPosts(category) {
+    // Update pill active state
+    pills.forEach(p => {
+      p.classList.toggle('active', p.getAttribute('data-category') === category);
+    });
+
+    // Update category card active state
+    cards.forEach(card => {
+      const isActive = card.getAttribute('data-category') === category || category === 'all';
+      card.classList.toggle('category-card--active', isActive);
+    });
+
+    // Filter post cards with animation
+    postCards.forEach(postCard => {
+      if (category === 'all' || postCard.getAttribute('data-category') === category) {
+        postCard.style.display = '';
+        postCard.style.opacity = '1';
+        postCard.style.transform = 'none';
+      } else {
+        postCard.style.opacity = '0';
+        postCard.style.transform = 'translateY(10px)';
+        setTimeout(() => { postCard.style.display = 'none'; }, 300);
+      }
+    });
+
+    // Smooth scroll to posts grid
+    document.getElementById('posts-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Pill click handlers
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPosts(pill.getAttribute('data-category'));
+    });
+  });
+
+  // Category card click handlers
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      filterPosts(card.getAttribute('data-category'));
+    });
+  });
+});
+</script>
