@@ -99,6 +99,7 @@ DEPENDENCIES
   jekyll (~> 4.4)
   jekyll-seo-tag
   jekyll-sitemap
+  sass-embedded (~> 1.79)
   webrick (~> 1.8)
 
 BUNDLED WITH
