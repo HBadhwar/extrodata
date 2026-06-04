@@ -4,12 +4,12 @@ title: "Welcome to Extrodata"
 date: 2026-06-01
 author: "Extrodata Team"
 category: "Company"
-excerpt: "We're launching EXD with a clear mission: deliver senior-only AI and Data consulting that produces measurable outcomes, not slide decks."
+excerpt: "We're launching Extrodata with a clear mission: deliver senior-only AI and Data consulting that produces measurable outcomes, not slide decks."
 reading_time: 4
 featured_image: "/assets/images/cloud-banner.jpg"
 ---
 
-## Why EXD Exists
+## Why Extrodata Exists
 
 The data and AI consulting market is crowded. Most firms operate the same model: sell strategy, hand off to implementation partners, and leave your team to figure out the last mile.
 
@@ -17,7 +17,7 @@ We built Extrodata because we believe a different approach is possible — one w
 
 ## What Makes Us Different
 
-**Senior-only delivery.** Every EXD practitioner has 10+ years of hands-on experience. There are no juniors on our projects, no learning curves charged to your budget, and no handoffs between strategy and implementation.
+**Senior-only delivery.** Every Extrodata practitioner has 10+ years of hands-on experience. There are no juniors on our projects, no learning curves charged to your budget, and no handoffs between strategy and implementation.
 
 **End-to-end capability.** From data strategy through architecture to AI model deployment — we own the full stack. This means fewer vendors, clearer accountability, and faster time to value.
 
@@ -33,7 +33,7 @@ The organisations getting real value from AI share three characteristics:
 
 3. **They built internal capability.** The most successful engagements leave the client team stronger than they found them. Knowledge transfer isn't a line item — it's the entire point.
 
-## What's Next for EXD
+## What's Next for Extrodata
 
 Over the coming months we'll be publishing more thinking on this site: case studies from our work, technical deep-dives, and practical guidance for organisations navigating the AI landscape.
 

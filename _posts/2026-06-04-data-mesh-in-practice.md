@@ -5,6 +5,7 @@ date: 2026-06-04
 author: "Extrodata Team"
 category: "Architecture"
 description: "A pragmatic look at implementing an account-per-domain Data Mesh architecture for global enterprises, moving past the hype into production reality."
+reading_time: 6 min read
 featured_image: "/assets/images/data-cloud.jpg"
 ---
 

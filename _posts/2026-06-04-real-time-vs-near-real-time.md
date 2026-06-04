@@ -5,6 +5,7 @@ date: 2026-06-04
 author: "Extrodata Team"
 category: "Data Engineering"
 description: "A pragmatic architectural guide to comparing streaming patterns: Apache Kafka, Azure Event Hubs, and Snowflake Snowpipe."
+reading_time: 5 min read
 featured_image: "/assets/images/data-eng-banner.jpg"
 ---
 

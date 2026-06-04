@@ -5,6 +5,7 @@ date: 2026-06-05
 author: "Extrodata Team"
 category: "Data Strategy"
 description: "A practical guide to building data governance frameworks that actually work — covering data quality, lineage, and compliance."
+reading_time: 7 min read
 featured_image: "/assets/images/data-governance-banner.jpg"
 ---
 

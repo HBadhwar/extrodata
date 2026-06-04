@@ -5,6 +5,7 @@ date: 2026-06-04
 author: "Extrodata Team"
 category: "Analytics & BI"
 description: "A technical guide for enterprises looking to migrate off legacy SSAS cubes to modern, scalable semantic layers."
+reading_time: 5 min read
 featured_image: "/assets/images/data-analytics-banner.jpg"
 ---
 

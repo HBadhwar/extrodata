@@ -5,6 +5,7 @@ date: 2026-06-03
 author: "Extrodata Team"
 category: "Cloud Platforms"
 excerpt: Understanding the architecture that unifies data warehousing, lakes, and analytics into a single platform.
+reading_time: 5 min read
 featured_image: "/assets/images/cloud-banner.jpg"
 ---
 

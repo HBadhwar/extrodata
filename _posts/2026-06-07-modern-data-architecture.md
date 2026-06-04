@@ -5,6 +5,7 @@ date: 2026-06-07
 author: "Extrodata Team"
 category: "Architecture"
 description: "How leading organisations are evolving their data architecture from traditional warehouses to cloud-native platforms."
+reading_time: 8 min read
 featured_image: "/assets/images/azure-1.jpg"
 ---
 
