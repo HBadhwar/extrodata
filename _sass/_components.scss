@@ -484,8 +484,10 @@ figure.highlight {
   background: #0d1117;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
   margin-bottom: var(--space-6);
+  width: 100%;
+  max-width: 100%;
 }
 
 pre.highlight,
@@ -493,7 +495,41 @@ figure.highlight pre {
   padding: 1.5rem;
   padding-top: 2.5rem;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Mobile: tighter padding, smaller font */
+@media (max-width: 640px) {
+  pre.highlight,
+  figure.highlight pre {
+    padding: 1rem;
+    padding-top: 2.2rem;
+    font-size: 0.8125rem;
+  }
+
+  .highlighter-rouge code,
+  pre.highlight code,
+  figure.highlight code {
+    font-size: 0.8125rem;
+  }
+
+  /* Scale down Mac dots on mobile */
+  pre.highlight::before,
+  figure.highlight pre::before {
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 12px;
+    box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
+  }
+
+  /* Keep copy button visible on mobile */
+  .code-copy-btn {
+    opacity: 1;
+  }
 }
 
 /* Mac window controls via pseudo-element */
