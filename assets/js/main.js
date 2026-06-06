@@ -168,6 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
       container = container.parentElement;
     }
 
+    // Skip inline code (span.highlighter-rouge for single-line code)
+    if (container.tagName === 'SPAN') return;
+
     // Skip if already processed (use Set for reliable dedup)
     if (processedContainers.has(container)) return;
     processedContainers.add(container);
