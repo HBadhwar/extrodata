@@ -168,14 +168,14 @@ document.addEventListener('DOMContentLoaded', () => {
       container = container.parentElement;
     }
 
-    // Skip inline code (span.highlighter-rouge for single-line code)
-    if (container.tagName === 'SPAN') return;
+    // Only add copy buttons to block-level code (must contain or be a <pre> element)
+    if (container.tagName !== 'PRE' && !container.querySelector('pre')) return;
 
     // Skip if already processed (use Set for reliable dedup)
     if (processedContainers.has(container)) return;
     processedContainers.add(container);
 
-    const codeEl = block.querySelector('code') || block;
+    const codeEl = container.querySelector('code') || container.querySelector('pre') || container;
 
     const btn = document.createElement('button');
     btn.className = 'code-copy-btn';
