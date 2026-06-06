@@ -10,9 +10,10 @@
   <meta name="msapplication-TileColor" content="#6366f1">
   <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
   <meta name="msapplication-config" content="{{ '/browserconfig.xml' | relative_url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}">
   {% seo %}
@@ -57,7 +58,7 @@
   {% include footer.html %}
 {% include cookie-consent.html %}
 
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 </body>
 </html>
