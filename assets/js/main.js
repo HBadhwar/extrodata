@@ -155,4 +155,48 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
+  /* ── 7. Copy Code Buttons ────────────────────────────────── */
+
+  document.querySelectorAll('pre.highlight, figure.highlight pre, .highlighter-rouge').forEach((pre) => {
+    // Avoid duplicate buttons if already added
+    if (pre.querySelector('.code-copy-btn')) return;
+
+    const codeEl = pre.querySelector('code') || pre;
+    const btn = document.createElement('button');
+    btn.className = 'code-copy-btn';
+    btn.setAttribute('aria-label', 'Copy code');
+    btn.textContent = 'Copy';
+
+    // Ensure parent has position: relative
+    pre.style.position = 'relative';
+
+    btn.addEventListener('click', () => {
+      const text = codeEl.innerText || codeEl.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    });
+
+    pre.appendChild(btn);
+  });
+
 });

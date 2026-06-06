@@ -474,3 +474,147 @@
   color: var(--color-text-muted);
   line-height: 1.7;
 }
+
+/* ── Terminal-Style Code Blocks ─────────────────────────── */
+
+.highlighter-rouge,
+pre.highlight,
+figure.highlight {
+  position: relative;
+  background: #0d1117;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: var(--space-6);
+}
+
+pre.highlight,
+figure.highlight pre {
+  padding: 1.5rem;
+  padding-top: 2.5rem;
+  overflow-x: auto;
+  margin: 0;
+}
+
+/* Mac window controls via pseudo-element */
+pre.highlight::before,
+figure.highlight pre::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  pointer-events: none;
+}
+
+/* Scrollbar styling for code blocks */
+pre.highlight::-webkit-scrollbar,
+figure.highlight pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+pre.highlight::-webkit-scrollbar-track,
+figure.highlight pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+pre.highlight::-webkit-scrollbar-thumb,
+figure.highlight pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+pre.highlight::-webkit-scrollbar-thumb:hover,
+figure.highlight pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Code text styling */
+.highlighter-rouge code,
+pre.highlight code,
+figure.highlight code {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #e6edf3;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Copy code button */
+.code-copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 200ms ease, background-color 200ms ease, color 200ms ease;
+  z-index: 2;
+}
+
+.highlighter-rouge:hover .code-copy-btn,
+pre.highlight:hover .code-copy-btn,
+figure.highlight:hover .code-copy-btn {
+  opacity: 1;
+}
+
+.code-copy-btn:hover {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.code-copy-btn.copied {
+  color: #22c55e;
+}
+
+/* Light mode override — soften the terminal look */
+[data-theme="light"] {
+  .highlighter-rouge,
+  pre.highlight,
+  figure.highlight {
+    background: #f6f8fa;
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  pre.highlight code,
+  figure.highlight code {
+    color: #24292f;
+  }
+
+  pre.highlight::-webkit-scrollbar-thumb,
+  figure.highlight pre::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  pre.highlight::-webkit-scrollbar-thumb:hover,
+  figure.highlight pre::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .code-copy-btn {
+    color: var(--color-text-muted);
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .code-copy-btn:hover {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
