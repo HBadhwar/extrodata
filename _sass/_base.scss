@@ -27,6 +27,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Disable fixed background on mobile — causes rendering issues */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
 /* ── Typography ─────────────────────────────────────────── */
 
 h1, h2, h3, h4, h5, h6 {
@@ -233,4 +240,15 @@ input, textarea, select, button {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* ── Noscript fallback — ensure content is visible without JS ─── */
+
+noscript + .reveal,
+noscript + .reveal-up,
+noscript + .reveal-left,
+noscript + .reveal-right,
+noscript + .reveal-stagger {
+  opacity: 1 !important;
+  transform: none !important;
 }
