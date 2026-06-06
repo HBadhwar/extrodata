@@ -157,6 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 7. Copy Code Buttons ────────────────────────────────── */
 
+  const processedContainers = new Set();
+
   document.querySelectorAll('pre.highlight, figure.highlight pre, .highlighter-rouge').forEach((block) => {
     // Find the outermost container
     let container = block;
@@ -166,8 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
       container = container.parentElement;
     }
 
-    // Skip if already has a button
-    if (container.querySelector('.code-copy-btn')) return;
+    // Skip if already processed (use Set for reliable dedup)
+    if (processedContainers.has(container)) return;
+    processedContainers.add(container);
 
     const codeEl = block.querySelector('code') || block;
 

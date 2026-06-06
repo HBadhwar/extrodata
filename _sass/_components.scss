@@ -786,11 +786,35 @@ figure.highlight:hover .code-copy-btn {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     border-radius: 8px;
+    min-width: 500px;
+  }
+
+  .post-article__content table thead,
+  .post-article__content table tbody,
+  .post-article__content table tr {
+    display: table-row-group;
+  }
+
+  .post-article__content table th,
+  .post-article__content table td {
+    white-space: normal;
+    padding: var(--space-2) var(--space-3);
   }
 
   .post-article__content table.comparison-table th:nth-child(1),
   .post-article__content table.comparison-table td:nth-child(1) {
     min-width: 120px;
+  }
+
+  .post-article__content table th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: rgba(13, 17, 23, 0.95);
+  }
+
+  [data-theme="light"] .post-article__content table th {
+    background: rgba(246, 248, 250, 0.95);
   }
 }
 
