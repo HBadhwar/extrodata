@@ -157,46 +157,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 7. Copy Code Buttons ────────────────────────────────── */
 
-  document.querySelectorAll('pre.highlight, figure.highlight pre, .highlighter-rouge').forEach((pre) => {
-    // Avoid duplicate buttons if already added
-    if (pre.querySelector('.code-copy-btn')) return;
+  document.querySelectorAll('pre.highlight, figure.highlight pre, .highlighter-rouge').forEach((block) => {
+    // Find the outermost container
+    let container = block;
+    while (container.parentElement && (container.parentElement.classList.contains('highlighter-rouge') ||
+           container.parentElement.tagName === 'FIGURE' ||
+           container.parentElement.classList.contains('highlight'))) {
+      container = container.parentElement;
+    }
 
-    const codeEl = pre.querySelector('code') || pre;
+    // Skip if already has a button
+    if (container.querySelector('.code-copy-btn')) return;
+
+    const codeEl = block.querySelector('code') || block;
+
     const btn = document.createElement('button');
     btn.className = 'code-copy-btn';
     btn.setAttribute('aria-label', 'Copy code');
     btn.textContent = 'Copy';
 
-    // Ensure parent has position: relative
-    pre.style.position = 'relative';
+    container.appendChild(btn);
+
+    // Prevent scroll-triggered clicks on mobile
+    let touchStartX = 0;
+    btn.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    btn.addEventListener('touchend', (e) => {
+      if (Math.abs(e.changedTouches[0].clientX - touchStartX) > 10) {
+        e.preventDefault();
+      }
+    }, { passive: false });
 
     btn.addEventListener('click', () => {
       const text = codeEl.innerText || codeEl.textContent;
       navigator.clipboard.writeText(text).then(() => {
         btn.textContent = 'Copied!';
         btn.classList.add('copied');
-        setTimeout(() => {
-          btn.textContent = 'Copy';
-          btn.classList.remove('copied');
-        }, 2000);
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
       }).catch(() => {
-        // Fallback for older browsers
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
         document.execCommand('copy');
-        document.body.removeChild(textarea);
+        document.body.removeChild(ta);
         btn.textContent = 'Copied!';
         btn.classList.add('copied');
-        setTimeout(() => {
-          btn.textContent = 'Copy';
-          btn.classList.remove('copied');
-        }, 2000);
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
       });
     });
-
-    pre.appendChild(btn);
   });
 
 });
