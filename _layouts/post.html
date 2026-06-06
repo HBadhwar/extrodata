@@ -28,13 +28,13 @@ layout: default
       </div>
     </div>
   </div>
-  <div class="post-article__content container reveal">
+  <div class="post-article__content container">
     {{ content }}
   </div>
 </article>
 {% else %}
 <article class="post-article container">
-  <header class="reveal">
+  <header>
     {% if page.category %}
     <span class="badge badge--sm" style="margin-bottom:var(--space-4);display:inline-block;">{{ page.category }}</span>
     {% endif %}
@@ -54,7 +54,7 @@ layout: default
       </span>
     </div>
   </header>
-  <div class="post-article__content reveal">
+  <div class="post-article__content">
     {{ content }}
   </div>
 </article>
