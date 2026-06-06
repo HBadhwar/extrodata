@@ -3,7 +3,7 @@ layout: post
 title: "Snowflake + GA4 Raw Data: Setting Up the GARD Connector End-to-End"
 author: "Extrodata Team"
 category: "Data Engineering"
-featured_image: "/assets/images/ga4-snowflake-architecture.svg"
+featured_image: "/assets/images/ga4-snowflake-hero.svg"
 description: "A complete guide to connecting Google Analytics 4 raw event data to Snowflake using the GARD connector, from setup to downstream analytics."
 reading_time: true
 ---
@@ -41,6 +41,8 @@ Unlike the GA4 UI reports (which aggregate and sample), the raw BigQuery export 
 | Incrementality testing | Not available | Full control |
 | Lookback windows | Fixed (24h GAClicks) | Configurable (up to 90 days) |
 
+<table class="comparison-table"></table>
+
 For media buyers and performance marketers, raw GA4 data enables:
 
 - **True last-touch and multi-touch attribution** by joining click IDs (`gclid`, `gbraid`, `wbraid`) back to ad platform spend data
@@ -63,9 +65,9 @@ Key features:
 
 ### Architecture Overview
 
-```
-GA4 Property → BigQuery Export → GARD Connector (Snowflake Marketplace) → Snowflake Tables & Views
-```
+<div class="diagram-container">
+  <img src="/assets/images/gard-architecture-inline.svg" alt="GARD Connector architecture: GA4 Property flows to BigQuery, then through GARD Connector on Snowflake Marketplace into Snowflake Warehouse and Views — a fully managed pipeline with no Python or cron jobs required">
+</div>
 
 The connector temporarily owns the destination tables and views while installed. During uninstallation, ownership can be transferred to your own role so you retain the data.
 
@@ -160,6 +162,8 @@ The wizard creates these objects automatically, or you can specify existing ones
 | **Destination Schema** | Where GA4 data tables and views will be created |
 | **Role** | Custom role with read access to ingested data |
 
+<table class="comparison-table"></table>
+
 Click **Configure** when ready.
 
 ### 4B: Authentication
@@ -240,12 +244,9 @@ Available export types: `DAILY`, `FRESH_DAILY` (GA360 only), `INTRADAY`, `USERS`
 
 For each GA4 property, the connector creates tables and corresponding flattened views in your destination schema:
 
-| Table | View | Description |
-|---|---|---|
-| `ANALYTICS_<propertyId>` | `ANALYTICS_<propertyId>__VIEW` | Daily event data |
-| `ANALYTICS_INTRADAY_<propertyId>` | `ANALYTICS_INTRADAY_<propertyId>__VIEW` | Streaming intraday data |
-| `USERS_<propertyId>` | `USERS_<propertyId>__VIEW` | User-level data |
-| `PSEUDONYMOUS_USERS_<propertyId>` | `PSEUDONYMOUS_USERS_<propertyId>__VIEW` | Pseudonymous user data |
+<div class="diagram-container">
+  <img src="/assets/images/gard-data-model.svg" alt="GARD data model showing raw tables with RAW, RUN_ID, SOURCE_TABLE_DATE, INGESTION_COMPLETE columns auto-creating flattened views with EVENT_DATE, EVENT_TIMESTAMP, EVENT_NAME, EVENT_PARAMS, USER_PSEUDO_ID columns, feeding downstream usage like ROAS dashboards, attribution models, ML features, CDP activation and funnel analysis">
+</div>
 
 ### Raw Table Structure
 
@@ -257,6 +258,8 @@ Each raw table contains four columns:
 | `RUN_ID` | VARIANT | ID of the ingestion process |
 | `SOURCE_TABLE_DATE` | DATE | Source BigQuery table date |
 | `INGESTION_COMPLETE` | BOOLEAN | Whether all data from that day has been loaded |
+
+<table class="comparison-table"></table>
 
 ### Flattened Views
 
@@ -460,6 +463,8 @@ With cleaned events in Snowflake, you can:
 | Connector licensing | Check Marketplace | May have per-property or flat pricing |
 | **Total (typical mid-size site)** | **~$100-300/month** | For 1M+ events/day |
 
+<table class="cost-table"></table>
+
 ## Known Limitations
 
 - **GA4 only** — Universal Analytics is not and will not be supported
@@ -481,6 +486,8 @@ With cleaned events in Snowflake, you can:
 | Slow initial load | Use a larger warehouse for the connector; the initial load runs backwards through all historical data |
 | Click IDs not captured | Ensure enhanced measurement is enabled in GA4 and relevant parameters are collected |
 | Connector errors after schema change | If a BigQuery column type changes, the existing view column is changed to `VARIANT`; check the view definition |
+
+<table class="comparison-table"></table>
 
 ## Summary
 

@@ -665,4 +665,145 @@ figure.highlight:hover .code-copy-btn {
   .code-copy-btn:hover {
     background: rgba(0, 0, 0, 0.08);
   }
+
+  /* Inline SVG diagrams in blog posts */
+  .diagram-container {
+    margin: var(--space-6) 0;
+    text-align: center;
+  }
+
+  .diagram-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* ── Tables ─────────────────────────────────────────────── */
+
+.post-article__content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: var(--space-6) 0;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.post-article__content thead {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.post-article__content th {
+  padding: var(--space-3) var(--space-4);
+  font-weight: 600;
+  text-align: left;
+  color: var(--color-text);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+}
+
+.post-article__content td {
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text-muted);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: top;
+}
+
+.post-article__content tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.post-article__content tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Column width control for comparison tables */
+.post-article__content table.comparison-table th:nth-child(1),
+.post-article__content table.comparison-table td:nth-child(1) {
+  min-width: 160px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.post-article__content table.comparison-table th:nth-child(2),
+.post-article__content table.comparison-table td:nth-child(2) {
+  width: 40%;
+}
+
+.post-article__content table.comparison-table th:nth-child(3),
+.post-article__content table.comparison-table td:nth-child(3) {
+  width: 40%;
+}
+
+/* Cost table styling */
+.post-article__content table.cost-table tfoot tr td {
+  border-top: 2px solid rgba(255, 255, 255, 0.12);
+  font-weight: 600;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Light mode table override */
+[data-theme="light"] {
+  .post-article__content table {
+    border-color: rgba(0, 0, 0, 0.12);
+    background: #fff;
+  }
+
+  .post-article__content thead {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  .post-article__content th {
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .post-article__content td {
+    border-bottom-color: rgba(0, 0, 0, 0.06);
+  }
+
+  .post-article__content tbody tr:hover {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .post-article__content table.cost-table tfoot tr td {
+    border-top-color: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.02);
+  }
+}
+
+/* Mobile: horizontal scroll for wide tables */
+@media (max-width: 640px) {
+  .post-article__content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+  }
+
+  .post-article__content table.comparison-table th:nth-child(1),
+  .post-article__content table.comparison-table td:nth-child(1) {
+    min-width: 120px;
+  }
+}
+
+/* Inline SVG diagrams in blog posts */
+.diagram-container {
+  margin: var(--space-6) 0;
+  text-align: center;
+}
+
+.diagram-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
 }

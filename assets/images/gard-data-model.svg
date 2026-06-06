@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420">
+  <defs>
+    <linearGradient id="rawg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f2a900"/>
+      <stop offset="100%" style="stop-color:#e8710a"/>
+    </linearGradient>
+    <linearGradient id="viewg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#16a34a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="420" fill="#0d1117" rx="12"/>
+  <rect x="1" y="1" width="998" height="418" rx="12" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Title area -->
+  <text x="500" y="32" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="system-ui,sans-serif" font-size="13" font-weight="600">GARD Data Model — Tables and Flattened Views</text>
+
+  <!-- Raw Table Box -->
+  <rect x="40" y="55" width="220" height="330" rx="10" fill="#161b22" stroke="rgba(242,169,0,0.3)" stroke-width="1"/>
+  <rect x="40" y="55" width="220" height="4" rx="2" fill="url(#rawg)"/>
+  <text x="150" y="82" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Raw Table</text>
+  <text x="150" y="98" text-anchor="middle" fill="rgba(242,169,0,0.6)" font-family="monospace" font-size="9">ANALYTICS_12345</text>
+
+  <!-- Column rows -->
+  <rect x="55" y="115" width="190" height="36" rx="6" fill="rgba(242,169,0,0.06)" stroke="rgba(242,169,0,0.12)" stroke-width="0.5"/>
+  <text x="68" y="130" fill="rgba(255,255,255,0.7)" font-family="monospace" font-size="10" font-weight="600">RAW</text>
+  <text x="68" y="144" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="8">VARIANT — full JSON event</text>
+
+  <rect x="55" y="160" width="190" height="36" rx="6" fill="rgba(242,169,0,0.06)" stroke="rgba(242,169,0,0.12)" stroke-width="0.5"/>
+  <text x="68" y="175" fill="rgba(255,255,255,0.7)" font-family="monospace" font-size="10" font-weight="600">RUN_ID</text>
+  <text x="68" y="189" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="8">VARIANT — ingestion process ID</text>
+
+  <rect x="55" y="205" width="190" height="36" rx="6" fill="rgba(242,169,0,0.06)" stroke="rgba(242,169,0,0.12)" stroke-width="0.5"/>
+  <text x="68" y="220" fill="rgba(255,255,255,0.7)" font-family="monospace" font-size="10" font-weight="600">SOURCE_TABLE_DATE</text>
+  <text x="68" y="234" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="8">DATE — source BQ table date</text>
+
+  <rect x="55" y="250" width="190" height="36" rx="6" fill="rgba(242,169,0,0.06)" stroke="rgba(242,169,0,0.12)" stroke-width="0.5"/>
+  <text x="68" y="265" fill="rgba(255,255,255,0.7)" font-family="monospace" font-size="10" font-weight="600">INGESTION_COMPLETE</text>
+  <text x="68" y="279" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="8">BOOLEAN — all data loaded?</text>
+
+  <!-- Arrow -->
+  <line x1="260" y1="220" x2="340" y2="220" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="338,217 348,220 338,223" fill="rgba(255,255,255,0.2)"/>
+  <text x="300" y="212" text-anchor="middle" fill="rgba(255,255,255,0.25)" font-family="system-ui,sans-serif" font-size="8">auto-created</text>
+
+  <!-- View Box -->
+  <rect x="360" y="55" width="220" height="330" rx="10" fill="#161b22" stroke="rgba(34,197,94,0.3)" stroke-width="1"/>
+  <rect x="360" y="55" width="220" height="4" rx="2" fill="url(#viewg)"/>
+  <text x="470" y="82" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Flattened View</text>
+  <text x="470" y="98" text-anchor="middle" fill="rgba(34,197,94,0.6)" font-family="monospace" font-size="9">ANALYTICS_12345__VIEW</text>
+
+  <!-- View columns -->
+  <rect x="375" y="115" width="190" height="36" rx="6" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.12)" stroke-width="0.5"/>
+  <text x="388" y="130" fill="rgba(255,255,255,0.7)" font-family="monospace" font-size="10" font-weight="600">EVENT_DATE</text>
+  <text x="388" y="144" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="8">DATE — event partition date</text>
+
+  <rect x="375" y="160" width="190" height="36" rx="6" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.12)" stroke-width="0.5"/>
+  <text x="388" y="175" fill="rgba(255,255,255,0.7)" font-family="monospace" font-size="10" font-weight="600">EVENT_TIMESTAMP</text>
+  <text x="388" y="189" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="8">NUMBER — microsecond timestamp</text>
+
+  <rect x="375" y="205" width="190" height="36" rx="6" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.12)" stroke-width="0.5"/>
+  <text x="388" y="220" fill="rgba(255,255,255,0.7)" font-family="monospace" font-size="10" font-weight="600">EVENT_NAME</text>
+  <text x="388" y="234" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="8">STRING — event type name</text>
+
+  <rect x="375" y="250" width="190" height="36" rx="6" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.12)" stroke-width="0.5"/>
+  <text x="388" y="265" fill="rgba(255,255,255,0.7)" font-family="monospace" font-size="10" font-weight="600">EVENT_PARAMS</text>
+  <text x="388" y="279" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="8">ARRAY — key-value parameters</text>
+
+  <rect x="375" y="295" width="190" height="36" rx="6" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.12)" stroke-width="0.5"/>
+  <text x="388" y="310" fill="rgba(255,255,255,0.7)" font-family="monospace" font-size="10" font-weight="600">USER_PSEUDO_ID</text>
+  <text x="388" y="324" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="8">STRING — anonymous user ID</text>
+
+  <!-- Downstream Box -->
+  <rect x="620" y="55" width="340" height="330" rx="10" fill="#161b22" stroke="rgba(139,92,246,0.3)" stroke-width="1"/>
+  <text x="790" y="85" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Downstream Usage</text>
+
+  <!-- Arrow to downstream -->
+  <line x1="580" y1="220" x2="620" y2="220" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="618,217 628,220 618,223" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- Downstream items -->
+  <rect x="640" y="105" width="300" height="44" rx="8" fill="rgba(139,92,246,0.06)" stroke="rgba(139,92,246,0.12)" stroke-width="0.5"/>
+  <circle cx="665" cy="127" r="12" fill="rgba(59,130,246,0.2)"/>
+  <text x="665" y="131" text-anchor="middle" fill="#3b82f6" font-family="system-ui,sans-serif" font-size="10">S</text>
+  <text x="685" y="124" fill="rgba(255,255,255,0.7)" font-family="system-ui,sans-serif" font-size="11" font-weight="500">ROAS Dashboards</text>
+  <text x="685" y="140" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="9">Looker / Tableau / Power BI</text>
+
+  <rect x="640" y="160" width="300" height="44" rx="8" fill="rgba(139,92,246,0.06)" stroke="rgba(139,92,246,0.12)" stroke-width="0.5"/>
+  <circle cx="665" cy="182" r="12" fill="rgba(16,185,129,0.2)"/>
+  <text x="665" y="186" text-anchor="middle" fill="#10b981" font-family="system-ui,sans-serif" font-size="10">A</text>
+  <text x="685" y="179" fill="rgba(255,255,255,0.7)" font-family="system-ui,sans-serif" font-size="11" font-weight="500">Attribution Models</text>
+  <text x="685" y="195" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="9">Multi-touch &amp; incrementality</text>
+
+  <rect x="640" y="215" width="300" height="44" rx="8" fill="rgba(139,92,246,0.06)" stroke="rgba(139,92,246,0.12)" stroke-width="0.5"/>
+  <circle cx="665" cy="237" r="12" fill="rgba(168,85,247,0.2)"/>
+  <text x="665" y="241" text-anchor="middle" fill="#a855f7" font-family="system-ui,sans-serif" font-size="10">M</text>
+  <text x="685" y="234" fill="rgba(255,255,255,0.7)" font-family="system-ui,sans-serif" font-size="11" font-weight="500">ML Features</text>
+  <text x="685" y="250" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="9">CLV / Churn / Conversion</text>
+
+  <rect x="640" y="270" width="300" height="44" rx="8" fill="rgba(139,92,246,0.06)" stroke="rgba(139,92,246,0.12)" stroke-width="0.5"/>
+  <circle cx="665" cy="292" r="12" fill="rgba(245,158,11,0.2)"/>
+  <text x="665" y="296" text-anchor="middle" fill="#f59e0b" font-family="system-ui,sans-serif" font-size="10">C</text>
+  <text x="685" y="289" fill="rgba(255,255,255,0.7)" font-family="system-ui,sans-serif" font-size="11" font-weight="500">CDP Activation</text>
+  <text x="685" y="305" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="9">Segment / RudderStack</text>
+
+  <rect x="640" y="325" width="300" height="44" rx="8" fill="rgba(139,92,246,0.06)" stroke="rgba(139,92,246,0.12)" stroke-width="0.5"/>
+  <circle cx="665" cy="347" r="12" fill="rgba(239,68,68,0.2)"/>
+  <text x="665" y="351" text-anchor="middle" fill="#ef4444" font-family="system-ui,sans-serif" font-size="10">F</text>
+  <text x="685" y="344" fill="rgba(255,255,255,0.7)" font-family="system-ui,sans-serif" font-size="11" font-weight="500">Funnel Analysis</text>
+  <text x="685" y="360" fill="rgba(255,255,255,0.35)" font-family="system-ui,sans-serif" font-size="9">Landing → Cart → Purchase</text>
+</svg>

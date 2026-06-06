@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="1000" height="280">
+  <defs>
+    <linearGradient id="ga4g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8710a"/>
+      <stop offset="100%" style="stop-color:#f4b400"/>
+    </linearGradient>
+    <linearGradient id="bqg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16c0e8"/>
+      <stop offset="100%" style="stop-color:#4285f4"/>
+    </linearGradient>
+    <linearGradient id="gardg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#29b6f6"/>
+      <stop offset="100%" style="stop-color:#0288d1"/>
+    </linearGradient>
+    <linearGradient id="sfg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f2a900"/>
+      <stop offset="100%" style="stop-color:#e8710a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="280" fill="#0d1117" rx="12"/>
+  <rect x="1" y="1" width="998" height="278" rx="12" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- GA4 Box -->
+  <rect x="30" y="80" width="160" height="120" rx="10" fill="#161b22" stroke="rgba(232,113,10,0.3)" stroke-width="1"/>
+  <rect x="30" y="80" width="160" height="4" rx="2" fill="url(#ga4g)"/>
+  <circle cx="75" cy="115" r="16" fill="url(#ga4g)" opacity="0.8"/>
+  <text x="75" y="120" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="11" font-weight="800">G4</text>
+  <text x="100" y="119" fill="rgba(255,255,255,0.8)" font-family="system-ui,sans-serif" font-size="12" font-weight="600">GA4 Property</text>
+  <text x="100" y="135" fill="rgba(255,255,255,0.4)" font-family="system-ui,sans-serif" font-size="9">Event tracking</text>
+  <rect x="45" y="150" width="130" height="12" rx="3" fill="rgba(232,113,10,0.08)"/>
+  <text x="52" y="159" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="8">page_view, purchase</text>
+
+  <!-- Arrow -->
+  <line x1="190" y1="140" x2="260" y2="140" stroke="#e8710a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="258,137 268,140 258,143" fill="#e8710a"/>
+  <text x="225" y="132" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-family="system-ui,sans-serif" font-size="8">BigQuery Link</text>
+
+  <!-- BigQuery Box -->
+  <rect x="270" y="80" width="160" height="120" rx="10" fill="#161b22" stroke="rgba(22,192,232,0.3)" stroke-width="1"/>
+  <rect x="270" y="80" width="160" height="4" rx="2" fill="url(#bqg)"/>
+  <circle cx="315" cy="115" r="16" fill="url(#bqg)" opacity="0.8"/>
+  <text x="315" y="120" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="9" font-weight="800">BQ</text>
+  <text x="340" y="119" fill="rgba(255,255,255,0.8)" font-family="system-ui,sans-serif" font-size="12" font-weight="600">BigQuery</text>
+  <text x="340" y="135" fill="rgba(255,255,255,0.4)" font-family="system-ui,sans-serif" font-size="9">Raw export tables</text>
+  <rect x="285" y="150" width="130" height="12" rx="3" fill="rgba(22,192,232,0.08)"/>
+  <text x="292" y="159" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="8">events_YYYYMMDD</text>
+
+  <!-- Arrow -->
+  <line x1="430" y1="140" x2="500" y2="140" stroke="#4285f4" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="498,137 508,140 498,143" fill="#4285f4"/>
+  <text x="465" y="132" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-family="system-ui,sans-serif" font-size="8">Storage API</text>
+
+  <!-- GARD Box -->
+  <rect x="510" y="80" width="160" height="120" rx="10" fill="#161b22" stroke="rgba(41,182,246,0.3)" stroke-width="1"/>
+  <rect x="510" y="80" width="160" height="4" rx="2" fill="url(#gardg)"/>
+  <circle cx="555" cy="115" r="16" fill="url(#gardg)" opacity="0.8"/>
+  <text x="555" y="120" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="8" font-weight="800">GARD</text>
+  <text x="580" y="119" fill="rgba(255,255,255,0.8)" font-family="system-ui,sans-serif" font-size="12" font-weight="600">GARD Connector</text>
+  <text x="580" y="135" fill="rgba(255,255,255,0.4)" font-family="system-ui,sans-serif" font-size="9">Marketplace app</text>
+  <rect x="525" y="150" width="130" height="12" rx="3" fill="rgba(41,182,246,0.08)"/>
+  <text x="532" y="159" fill="rgba(255,255,255,0.4)" font-family="system-ui,sans-serif" font-size="8">Scheduled Snowflake Tasks</text>
+
+  <!-- Arrow -->
+  <line x1="670" y1="140" x2="740" y2="140" stroke="#f2a900" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="738,137 748,140 738,143" fill="#f2a900"/>
+  <text x="705" y="132" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-family="system-ui,sans-serif" font-size="8">Ingest</text>
+
+  <!-- Snowflake Box -->
+  <rect x="750" y="80" width="160" height="120" rx="10" fill="#161b22" stroke="rgba(242,169,0,0.3)" stroke-width="1"/>
+  <rect x="750" y="80" width="160" height="4" rx="2" fill="url(#sfg)"/>
+  <g transform="translate(795,115)">
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#f2a900" stroke-width="1.5" opacity="0.8"/>
+    <line x1="0" y1="-10" x2="0" y2="10" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-7" y1="-5" x2="7" y2="5" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-7" y1="5" x2="7" y2="-5" stroke="#f2a900" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="825" y="119" fill="rgba(255,255,255,0.8)" font-family="system-ui,sans-serif" font-size="12" font-weight="600">Snowflake</text>
+  <text x="825" y="135" fill="rgba(255,255,255,0.4)" font-family="system-ui,sans-serif" font-size="9">Warehouse &amp; Views</text>
+  <rect x="765" y="150" width="130" height="12" rx="3" fill="rgba(242,169,0,0.08)"/>
+  <text x="772" y="159" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="8">ANALYTICS_12345</text>
+
+  <!-- Bottom annotation -->
+  <rect x="300" y="220" width="400" height="40" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="500" y="244" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="system-ui,sans-serif" font-size="11">Fully managed pipeline — no Python, no cron jobs, no infrastructure to maintain</text>
+</svg>
