@@ -86,9 +86,13 @@ reading_time: 2 min read
       <div class="contact-form-card contact-form-card--glass">
         <p class="contact-form-card__subtitle">Fill out the details below and one of our architects will be in touch within 24 hours.</p>
 
-        <!-- Contact form — mailto fallback (replace with Formspree endpoint when configured) -->
-        <form id="contact-form" action="mailto:enquiries@extrodata.com" method="POST" enctype="text/plain" class="contact-form">
+        <!-- Contact form — powered by Formsubmit.co (unlimited, free) -->
+        <form id="contact-form" action="https://formsubmit.co/enquiries@extrodata.com" method="POST" class="contact-form">
           <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" value="New enquiry from Extrodata website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="{{ '/contact/' | absolute_url }}#sent">
 
           <div class="form-row">
             <div class="form-group">
@@ -150,7 +154,7 @@ reading_time: 2 min read
   </div>
 </section>
 
-<!-- Formspree AJAX submission -->
+<!-- Formsubmit.co AJAX submission -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var form = document.getElementById('contact-form');
