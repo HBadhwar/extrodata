@@ -936,6 +936,12 @@
 
 .team-card__avatar {
   margin: 0 auto var(--space-4);
+
+  &.avatar {
+    /* When used as <img>, override the CSS avatar defaults */
+    object-fit: cover;
+    border: 3px solid var(--color-primary-highlight);
+  }
 }
 
 .team-card__name {
