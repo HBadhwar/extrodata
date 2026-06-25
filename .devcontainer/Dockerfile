@@ -1,6 +1,5 @@
 FROM node:20-slim
 
-# Install basic tools + Ruby for Jekyll compilation
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     git \
@@ -12,14 +11,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 WORKDIR /workspace
 
-# Install Jekyll globally
 RUN gem install jekyll bundler
+
+# Pin to last working version before system role bug
+RUN npm install -g @anthropic-ai/claude-code@2.1.153
 
 # Install OpenCode
 RUN curl -fsSL https://opencode.ai/install | bash
 
-# Install essential MCP servers for the web agent
 RUN npm install -g @modelcontextprotocol/server-filesystem
 RUN npm install -g @modelcontextprotocol/server-memory
+
+# Disable Claude Code auto-updates permanently
+RUN mkdir -p /root/.claude && echo '{"env":{"DISABLE_AUTOUPDATER":"1","DISABLE_UPDATES":"1"}}' > /root/.claude/settings.json
 
 CMD ["bash"]

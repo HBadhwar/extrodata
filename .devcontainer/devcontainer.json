@@ -9,6 +9,16 @@
         "--env-file",
         "${localWorkspaceFolder}/.env"
     ],
+    "remoteEnv": {
+        "ANTHROPIC_BASE_URL": "http://192.168.0.154:1235",
+        "ANTHROPIC_AUTH_TOKEN": "lmstudio",
+        "DISABLE_AUTOUPDATER": "1",
+        "DISABLE_UPDATES": "1"
+    },
+    "portsAttributes": {
+        "1234": { "onAutoForward": "ignore" },
+        "1235": { "onAutoForward": "ignore" }
+    },
     "customizations": {
         "vscode": {
             "extensions": [
