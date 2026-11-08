@@ -87,10 +87,11 @@ reading_time: 2 min read
         <p class="contact-form-card__subtitle">Fill out the details below and one of our architects will be in touch within 24 hours.</p>
 
         <!-- Contact form — powered by Formsubmit.co (unlimited, free) -->
-        <form id="contact-form" action="https://formsubmit.co/enquiries@extrodata.com" method="POST" class="contact-form">
-          <input type="text" name="_gotcha" style="display:none">
+        <form id="contact-form" action="https://formsubmit.co/d4dafee282b70c0bfb0ed3d468e3ba57" method="POST" class="contact-form">
+          <!-- Honeypot: bots fill this, humans never see it (Formsubmit discards these) -->
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
           <input type="hidden" name="_subject" value="New enquiry from Extrodata website">
-          <input type="hidden" name="_captcha" value="false">
+          <!-- Formsubmit's reCAPTCHA is on by default; it shows between submit and redirect to _next -->
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="{{ '/contact/' | absolute_url }}#sent">
 
@@ -154,37 +155,47 @@ reading_time: 2 min read
   </div>
 </section>
 
-<!-- Formsubmit.co AJAX submission -->
+<!-- Formsubmit.co submission: normal POST → Formsubmit captcha → redirect back to /contact/#sent -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var form = document.getElementById('contact-form');
   var success = document.getElementById('contact-success');
+  var PENDING_KEY = 'contact_lead_pending';
 
+  // Remember the (non-PII) service choice so the lead event can use it after the redirect
   if (form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var formData = new FormData(form);
-      var action = form.action;
-
-      fetch(action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(response) {
-        if (response.ok) {
-          form.style.display = 'none';
-          success.style.display = 'flex';
-        } else {
-          alert('Sorry, there was a problem sending your message. Please try again or email us directly.');
-        }
-      }).catch(function() {
-        alert('Sorry, there was a problem sending your message. Please try again or email us directly.');
-      });
+    form.addEventListener('submit', function() {
+      try {
+        sessionStorage.setItem(PENDING_KEY, form.querySelector('[name="service"]').value || 'not_selected');
+      } catch (e) {}
     });
+  }
+
+  // Back from Formsubmit after a successful send
+  if (window.location.hash === '#sent' && form && success) {
+    form.style.display = 'none';
+    success.style.display = 'flex';
+
+    var service = null;
+    try {
+      service = sessionStorage.getItem(PENDING_KEY);
+      sessionStorage.removeItem(PENDING_KEY); // so a refresh doesn't count a second lead
+    } catch (e) {}
+
+    if (service !== null) {
+      // GA4 conversion via GTM — never send name/email/message (PII)
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'generate_lead',
+        form_id: 'contact-form',
+        service_interest: service
+      });
+    }
   }
 
   document.getElementById('send-another').addEventListener('click', function(e) {
     e.preventDefault();
+    history.replaceState(null, '', window.location.pathname);
     success.style.display = 'none';
     form.style.display = 'block';
     form.reset();

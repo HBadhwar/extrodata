@@ -5,6 +5,13 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // Page metadata for GTM (read via Data Layer Variables)
+    dataLayer.push({
+      page_type: {{ page.layout | default: 'page' | jsonify }}{% if page.layout == 'post' %},
+      post_category: {{ page.category | default: 'Uncategorised' | jsonify }},
+      post_author: {{ page.author | default: 'Extrodata Team' | jsonify }},
+      post_date: {{ page.date | date: '%Y-%m-%d' | jsonify }}{% endif %}
+    });
     window.loadGoogleTag = function() {
       if (window.googleTagLoaded) return;
       window.googleTagLoaded = true;
