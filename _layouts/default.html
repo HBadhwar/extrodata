@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+  <!-- Google Tag Manager (loads only after cookie consent is accepted) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.loadGoogleTag = function() {
+      if (window.googleTagLoaded) return;
+      window.googleTagLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-K4WWJM3N';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+    };
+    try {
+      if (localStorage.getItem('cookie_consent') === 'accepted') window.loadGoogleTag();
+    } catch (e) {}
+  </script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/svg+xml" sizes="any" href="{{ '/assets/images/favicon-32.svg' | relative_url }}">

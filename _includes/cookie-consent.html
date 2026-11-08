@@ -49,10 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function initAnalytics() {
-    // Add analytics initialization here (e.g., Plausible, Fathom, etc.)
-    // Example for Plausible:
-    // var d=document,s=d.createElement('script');s.src='https://plausible.io/js/script.js';
-    // d.getElementsByTagName('head')[0].appendChild(s);
+    // Google Tag Manager — defined in _layouts/default.html <head>
+    if (typeof window.loadGoogleTag === 'function') window.loadGoogleTag();
   }
 });
 </script>
