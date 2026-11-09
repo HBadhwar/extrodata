@@ -13,16 +13,14 @@ WORKDIR /workspace
 
 RUN gem install jekyll bundler
 
-# Pin to last working version before system role bug
-RUN npm install -g @anthropic-ai/claude-code@2.1.153
-
 # Install OpenCode
 RUN curl -fsSL https://opencode.ai/install | bash
+
+RUN curl -fsSL https://claude.ai/install.sh | bash 
 
 RUN npm install -g @modelcontextprotocol/server-filesystem
 RUN npm install -g @modelcontextprotocol/server-memory
 
-# Disable Claude Code auto-updates permanently
-RUN mkdir -p /root/.claude && echo '{"env":{"DISABLE_AUTOUPDATER":"1","DISABLE_UPDATES":"1"}}' > /root/.claude/settings.json
-
 CMD ["bash"]
+
+ENV PATH="/root/.local/bin:${PATH}"
